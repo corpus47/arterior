@@ -41,9 +41,9 @@
                 </div>
             </div>
         </footer>
-        <?php if(is_front_page()):?>
+        <?php /*if(is_front_page()):*/?>
         <a class="scroll-to-top"></a>
-        <?php endif;?>
+        <?php /*endif;*/?>
     </div><!-- end main-container -->
 
 <?php wp_footer();?>

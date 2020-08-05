@@ -10773,10 +10773,15 @@ header {
 .bimgo-gdl-slider-container {
   position: relative;
   width: 100%;
+  max-width: 1340px;
   height: auto;
   display: inline-block;
-  padding: 5rem 5rem 0 5rem;
+  padding: 0rem;
+  margin: 0 auto;
   margin-bottom: 1.5rem;
+  /*margin-left:5rem;
+  margin-right:5rem;*/
+  padding-top: 5rem;
 }
 
 .bimgo-gdl-slider-container .slide-div {
@@ -10809,7 +10814,7 @@ header {
 }
 
 .bimgo-gdl-slider-container .slick-next {
-  right: 15px;
+  right: 3.5rem;
 }
 .bimgo-gdl-slider-container .slick-next:before {
   content: url("../images/refslider-arrow-right.png");
@@ -10820,7 +10825,7 @@ header {
 
 .bimgo-gdl-slider-container .slick-prev {
   left: auto;
-  right: 60px;
+  right: 7rem;
 }
 .bimgo-gdl-slider-container .slick-prev:before {
   content: url("../images/refslider-arrow-left.png");
@@ -10833,6 +10838,26 @@ header {
   position: absolute;
   top: 0px;
   right: 45px;
+}
+
+.bimgo-gdl-slider-container .slide-div .gld_link,
+.bimgo-gdl-slider-container .slide-div .email_link {
+  color: #ffffff;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  text-align: left;
+  text-decoration: underline;
+  padding-left: 25px;
+}
+
+.bimgo-gdl-slider-container .slide-div .email_link {
+  text-decoration: none;
+  background: url("../images/email_link.png") left center no-repeat;
+}
+
+.bimgo-gdl-slider-container .slide-div .gld_link {
+  background: url("../images/gld_link.png") left center no-repeat;
 }
 
 pre {

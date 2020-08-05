@@ -442,10 +442,14 @@ $(document).ready(function(){
 
     //console.log('input '+$('.filters-search').find('input[name=search_bar]').is(':hover'));
 
-    if($('.filters-search').find('.ret_bar').is(':hover') == false && $('.filters-search').find('input[name=search_bar]').is(':hover') == false) {
-      //console.log('close');
-      $('.filters-search').find('.ret_bar').hide();
-      $('.filters-search').find('input[name=search_bar]').val('');
+    if($('.filters-search').find('.ret_bar').length) {
+
+      if($('.filters-search').find('.ret_bar').is(':hover') == false && $('.filters-search').find('input[name=search_bar]').is(':hover') == false) {
+        //console.log('close');
+        $('.filters-search').find('.ret_bar').hide();
+        $('.filters-search').find('input[name=search_bar]').val('');
+      }
+
     }
 
   });
