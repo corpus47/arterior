@@ -1,0 +1,224 @@
+header {
+    background:none;
+    width:100%;
+    height:auto;
+    padding:0;
+    margin:0;
+    overflow:hidden;
+}
+
+.header-container {
+    width:100%;
+    max-width:1920px;
+    margin:0;
+    padding:0;
+    height:auto;
+    z-index:99999;
+    position:absolute;
+    /*overflow:hidden;*/
+    display:block;
+    top:42px;
+}
+.header-container .logo {
+    position:relative;
+    float:left;
+    width:100%;
+    max-width:225px;
+    height:auto;
+    display:block;
+    text-align:left;
+    padding-left:57px
+}
+.navbar-light .navbar-nav .nav-link {
+    color:#ffffff;
+    text-transform:uppercase;
+}
+
+.navbar-light .navbar-nav a:active {
+    font-weight:bold;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color:#ffffff;
+}
+
+.navbar {
+    padding:0.5rem 0px;
+    max-width:1270px !important;
+    margin:0 !important;
+}
+
+.navbar .container {
+    padding-right:0;
+    padding-left:0;
+    width:auto;
+    margin-left:0;
+    margin-right:0;
+}
+.nav-link {
+    min-width:155px;
+    text-align:center;
+    border:1px solid transparent;
+}
+.menu-item a {
+    text-transform:uppercase;
+}
+
+.menu-item a:hover {
+    color:#ffffff;
+}
+.menu-item a:active {
+    color:#ffffff;
+}
+
+.nav-link:hover {
+    border:1px solid #ffffff;
+}
+.navbar-brand {
+    background:url('../images/hamb-menu.png') center center no-repeat;
+    display:block;
+    height:40px;
+    width:105px;
+    margin-right:0;
+    margin-left:1rem;
+}
+
+.dropdown-menu {
+    background:transparent;
+    border-left:none;
+    border-right:none;
+    border-top:none;
+    border-bottom:none;
+    border-radius:0;
+    margin-top:0;
+    padding-top:0;
+}
+
+.dropdown-toggle::after {
+    display:none;
+}
+
+.dropdown-menu a {
+    color:#ffffff;
+    font-weight:normal !important;
+}
+
+.dropdown-menu a:hover {
+    color:#ffffff;
+    background-color:transparent;
+    background:url('../images/toogle-bg-hover.png') left no-repeat;
+}   
+
+.dropdown-menu li:first-child {
+    padding-top:1rem;
+    
+}
+.dropdown-menu li {
+    border-left:1px solid #ffffff;
+    
+}
+
+.dropdown-menu li:last-child {
+    border-left:none;
+    background:url('../images/last-toogle-bg.png') left no-repeat;
+}
+
+.header-container .current-menu-item a, 
+.header-container .current_page_item a {
+    font-weight:bold !important;
+}
+
+.header-container .current-menu-item .dropdown-menu a, 
+.header-container .current_page_item .dropdown-menu a {
+    font-weight:normal !important;
+}
+.search_bar {
+    width:100%;
+    max-width:230px;
+    position:relative;
+    float:left;
+    display:block;
+    padding:0 0 0 1rem;
+    margin:0.5rem 0rem;
+    border: 1px solid #FFFFFF;
+    border-radius: 42px 42px 42px 42px;
+    background:url('../images/search-icon.png') right no-repeat;
+}
+
+.search_bar input {
+    height:42px;
+    background: transparent;
+    border: none;
+    color:#ffffff;
+    width:100%;
+    max-width:160px;
+}
+
+.search_bar input:focus {
+    outline: none;
+}
+.contact-menu {
+    width:100px;
+    height:42px;
+    position:relative;
+    float:left;
+    display:block;
+    background:url('../images/contact-menu-bg.png') center center no-repeat;
+    padding:0.5rem 0rem;
+    margin:0.5rem 0rem;
+}
+
+.langswitch-menu {
+    width:auto;
+    height:42px;
+    position:relative;
+    float:left;
+    display:block;
+    padding:0.5rem 0rem;
+    margin:0.5rem 0rem;
+    text-transform:uppercase;
+    
+}
+.langswitch-menu:link,
+.langswitch-menu:visited,
+.langswitch-menu:hover,
+.langswitch-menu:active {
+    text-decoration:none;
+}
+
+.slide-div {
+    position:relative;
+}
+
+.slide-div h1 {
+ position: absolute;
+ top:27%;
+ width:100%;
+ /*left: 50%;
+ -webkit-transform: translate(-50%, -50%);
+ transform: translate(-50%, -50%);
+ -webkit-transition: all 300ms ease;*/
+}
+.slide-div h1 p {
+    position:relative;
+    float:left;
+    width:100%;
+    height:auto;
+    text-align:center;
+}
+
+.slider-container,
+.home-referencia-slider,
+.home-butorforgalmazas-slider  {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease;
+    -webkit-transition: opacity 1s ease;
+}
+
+.slider-container.slick-initialized,
+.home-referencia-slider.slick-initialized,
+.home-butorforgalmazas-slider.slick-initialized  {
+    visibility: visible;
+    opacity: 1;    
+}

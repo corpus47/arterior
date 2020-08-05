@@ -1,0 +1,267 @@
+@import 'fonts';
+
+$theme-colors: (
+  "primary": #0074d9,
+  "danger": #ff4136
+);
+.bg-none {
+  background:transparent;
+}
+
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+@import 'header';
+@import 'content';
+@import 'footer';
+
+body {
+  font-family: 'RalewayLight';
+  font-size:1em;
+  margin:0;
+  padding:0;
+  background:#333333;
+  color:#ffffff;
+}
+.main-container {
+  width:100%;
+  max-width:1920px;
+  height:auto;
+  margin:0 auto;
+  padding:0;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+a:link, a:visited {
+  color:#ffffff;
+}
+
+/*.nav a {
+  color:#ffffff;
+}
+
+.nav a:active {
+  color:#ffffff;
+}
+
+.nav a:visited {
+  color:#ffffff;
+}*/
+
+nav {
+  width:100%;
+  height:auto;
+  position:relative;
+  float:left;
+  margin:0;
+  padding:0;
+}
+
+ul.nav li a, ul.nav li a:visited {
+  color:#ffffff !important;
+  text-decoration:none;
+}
+
+ul.nav li a:hover, ul.nav li a:active {
+  color: #ffffff !important;
+}
+
+ul.nav li.active a {
+  color: #ffffff !important;
+}
+
+
+
+.wp-block-image {
+  margin-bottom:0;
+}
+
+.slick-prev {
+  z-index:999999;
+  left: 57px;
+  [dir="rtl"] & {
+      left: auto;
+      right: 57px;
+  }
+  &:before {
+      content: url('../images/slick-arrow-left.png'); // <<<<<<<<
+      [dir="rtl"] & {
+          content: url('../images/slick-arrow-right.png'); // <<<<<<<<
+      }
+  }
+}
+
+.slick-next {
+  z-index:999999;
+  right: 57px;
+  [dir="rtl"] & {
+      left: 57px;
+      right: auto;
+  }
+  &:before {
+      content: url('../images/slick-arrow-right.png'); // <<<<<<<<
+      [dir="rtl"] & {
+          content: url('../images/slick-arrow-left.png'); // <<<<<<<<
+      }
+  }
+}
+
+.slick-dots {
+  z-index:999999;
+  bottom:10%;
+}
+
+.slick-dots li{
+
+    width:45px;
+    height:4px;
+
+}
+.slick-dots li img:nth-child(1) {
+  display: block;
+
+}
+
+.slick-dots li img:nth-child(2) {
+  display: none;
+
+}
+
+.slick-dots li.slick-active img:nth-child(1) {
+  display: none;
+
+}
+
+.slick-dots li.slick-active img:nth-child(2) {
+  display: block;
+
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom:0;
+}
+
+.slick-slide {
+  height:750px;
+}
+
+.slick-slide img {
+  /*height:750px;*/
+}
+
+/*.slider-container div {
+  height: auto; 
+  width: 100%; 
+}
+.slider-container div img{
+  height: auto; 
+  width: 100%; 
+  object-fit: cover;
+}*/
+
+section {
+  background:#ffffff none;
+  margin:0;
+  padding:0;
+}
+section h1, section p {
+  text-align:center;
+  color:#000000;
+}
+
+.kapcsolat-section h1 {
+    padding:1.5rem 0;
+}
+
+.kapcsolat-section p {
+  padding:0 0 1.5rem 0;
+}
+
+#map {
+  height:600px;
+}
+
+.scroll-to-top {
+  display: inline-block;
+  background-color: #555555;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+.scroll-to-top:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+
+.scroll-to-top:active {
+  background-color: #555;
+}
+.scroll-to-top::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+.scroll-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.panel-layout {
+  position:relative;
+  float:left;
+  width:100%;
+  height:auto;
+  margin:0;
+  padding:0;
+}
+
+.panel-grid, .so-panel {
+  margin:0;
+  padding:0;
+  position:relative;
+  float:left;
+  width:100%;
+  height:auto;
+}
+
+@media (min-width: 1200px) {
+  .container-xl, .container-lg, .container-md, .container-sm, .main-container {
+      max-width: 1920px;
+  }
+  .navbar {
+    //max-width:700px !important;
+  }
+}
+
+@media (max-width:1380px) {
+  .header-container {
+    max-width:1380px;
+  }
+  .navbar {
+    max-width:700px !important;
+  }
+  .home-referencia-slider .slide-div img,
+  .home-butorforgalmazas-slider .slide-div img {
+    /*max-width:320px;*/
+  }
+  .home-referencia-slider .slide-div p,
+  .home-butorforgalmazas-slider .slide-div p {
+    /*max-width:320px;*/
+  }
+}

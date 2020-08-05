@@ -1,0 +1,95 @@
+footer {
+    /*background:url('../images/footer-bg-belsoepiteszet.jpg') no-repeat;*/
+    background-size:cover;
+    color:#fff;
+    overflow:hidden;
+}
+
+/*.belsoepiteszet {
+    background:url('../images/footer-bg-belsoepiteszet.jpg') no-repeat;
+    background-size:cover;
+}
+
+.bimgo {
+    background:url('../images/footer-bg-bimgo.jpg') no-repeat;
+    background-size:cover;
+}
+
+.referenciak {
+    background:url('../images/footer-bg-referenciak.jpg') no-repeat;
+    background-size:cover;
+}*/
+
+footer .info-container {
+    position:relative;
+    padding:75px 0;
+}
+
+footer .info-container .cell {
+    width:100%;
+    display:block;
+    float:left;
+    margin:0;
+    padding:0;
+    text-align:center;
+}
+
+.footer-logo {
+    max-width:20%;
+}
+
+.social {
+    max-width:25%;
+}
+
+.copy {
+    height:auto;
+    min-height:50px;
+    vertical-align:middle;
+    max-width:55%;
+}
+
+.copy p{
+    margin-top:20px;
+    font-size:10px;
+}
+
+.social a {
+    display:block;
+    float:left;
+    height:50px;
+    width:100%;
+    max-width:33.33%;
+}
+
+.insta {
+    background:url('../images/insta.png') no-repeat center;
+}
+.face {
+    background:url('../images/face.png') no-repeat center;
+}
+.youtube {
+    background:url('../images/youtube.png') no-repeat center;
+}
+
+.footer-menu-container {
+    text-align:center;
+    margin-top:75px;
+}
+
+.footer-menu-container li a {
+    padding:0.5rem 0rem;
+    margin:0 auto;
+    display:block;
+    border:1px solid transparent;width:100%;
+    max-width:360px;
+}
+.footer-menu-container a:link,
+.footer-menu-container a:hover,
+.footer-menu-container a:active,
+.footer-menu-container a:visited {
+    text-decoration:none;
+}
+.footer-menu-container a:hover {
+    border:1px solid #ffffff; 
+}
