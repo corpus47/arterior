@@ -31,7 +31,7 @@ function load_scripts() {
 
 add_action('wp_enqueue_scripts','load_scripts');
 
-add_theme_support( 'post-thumbnails',array('page','post','referencia','termekek','egyedi_butorok'));
+add_theme_support( 'post-thumbnails',array('page','post','referencia','termekek','egyedi_butorok','gld_files'));
 
 if ( ! file_exists( get_template_directory() . '/class-wp-bootstrap-navwalker.php' ) ) {
   // File does not exist... return an error.
@@ -895,3 +895,44 @@ function egyedibutorok() {
 }
 
 add_shortcode('egyedibutorok', 'egyedibutorok');
+
+function gdl_slider() {
+
+  ob_start();
+
+  $loop = new WP_Query( array( 'post_type' => 'gld_files', 'posts_per_page' => 10 ) );
+
+  ?><div class="bimgo-gdl-slider-container"><?php
+
+  while ( $loop->have_posts() ) : $loop->the_post();
+
+    ?><div class="slide-div"><?php
+
+    if (has_post_thumbnail( get_the_ID() ) ):
+      $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'single-post-thumbnail' );
+      ?><img src="<?php echo $image[0];?>" /><?php
+    endif;
+    ?><h2><?php
+    the_title();
+    ?></h2><?php
+    ?><p><?php
+    the_excerpt();
+    ?></p><?php
+    ?>
+    <a class="gld_link" target="_BLANK" href="<?php echo  get_field('gld_file');?>" ><?php echo __('GLD fájl letöltése >>');?></a>
+    <a class="email_link" href="mailto:butorforgalmazas@arterior.hu">butorforgalmazas@arterior.hu</a>
+    <?php
+    ?></div><?php
+
+  endwhile;
+
+  ?></div><?php
+
+  $content = ob_get_contents();
+
+  ob_end_clean();
+
+  echo $content;
+}
+
+add_shortcode('gdl_slider','gdl_slider');

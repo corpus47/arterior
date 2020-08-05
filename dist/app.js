@@ -357,10 +357,14 @@
         }
       });
     });
-    var filters_search_bar = $('.filters-search').find('.search_bar');
-    console.log(filters_search_bar.height()); //var ret_bar_top = filters_search_bar.position().top + 10px;
 
-    $('.filters-search').find('.ret_bar').css('top', filters_search_bar.position().top + (filters_search_bar.height() + 9) + "px"); //$('.filters-search').find('.ret_bar').css('width',filters_search_bar.width()+"px");
+    if ($('.filters-search').find('.search_bar').length) {
+      var filters_search_bar = $('.filters-search').find('.search_bar');
+      console.log(filters_search_bar.height()); //var ret_bar_top = filters_search_bar.position().top + 10px;
+
+      $('.filters-search').find('.ret_bar').css('top', filters_search_bar.position().top + (filters_search_bar.height() + 9) + "px");
+    } //$('.filters-search').find('.ret_bar').css('width',filters_search_bar.width()+"px");
+
 
     $('.click-button').live('click', function () {
       $('.ret_bar').find('.ret_bar_link').first().trigger('click');
@@ -395,8 +399,10 @@
             results = $.parseJSON(results);
             console.log(results.content);
             $('.filters-search').find('.ret_bar').html(results.content); //$('.filters-search').find('.ret_bar').text($('.filters-search').find('input[name=search_bar]').val());
+            //if($('.filters-search').find('.search_bar').lenth){
 
-            $('.filters-search').find('.ret_bar').css('top', $('.filters-search').find('.search_bar').position().top + ($('.filters-search').find('.search_bar').height() + 9) + "px");
+            $('.filters-search').find('.ret_bar').css('top', $('.filters-search').find('.search_bar').position().top + ($('.filters-search').find('.search_bar').height() + 9) + "px"); //}
+
             $('.filters-search').find('.ret_bar').show();
           }
         }); //$('.filters-search').find('.ret_bar').text($('.filters-search').find('input[name=search_bar]').val());
@@ -470,6 +476,42 @@
         $('.filters-search').find('.ret_bar').hide();
         $('.filters-search').find('input[name=search_bar]').val('');
       }
+    });
+    $('.bimgo-gdl-slider-container').slick({
+      autoplay: false,
+      dots: false,
+      arrows: true,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+
+      /*infinite: true,
+      cssEase: 'linear',
+      variableWidth: true,
+      variableHeight: true,*/
+      responsive: [{
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: false
+        }
+      }, {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      }, {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      } // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+      ]
     });
     var $loading = $('.ajax-load').hide();
     $(document).ajaxStart(function () {
