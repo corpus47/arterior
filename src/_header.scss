@@ -51,9 +51,10 @@ header {
     color:#000000 !important;
 }
 
-/*#menu-fomenu .dark ul.nav li a, ul.nav li a:visited {
+.dark ul.nav li a, 
+.dark ul.nav li a:visited {
     color:#000000 !important;
-}*/
+}
 
 .navbar {
     padding:0.5rem 0px;
@@ -110,6 +111,10 @@ header {
     margin-left:1rem;
 }
 
+.dark .navbar-brand {
+    background:url('../images/hamb-menu-dark.png') center center no-repeat;
+}
+
 .dropdown-menu {
     background:transparent;
     border-left:none;
@@ -142,6 +147,7 @@ header {
 
 .dark .dropdown-menu a:hover {
     color:#000000 !important;
+    background:url('../images/toogle-dark-bg-hover.png') left no-repeat;
 }
 
 .dropdown-menu li:first-child {
@@ -159,6 +165,10 @@ header {
 .dropdown-menu li:last-child {
     border-left:none;
     background:url('../images/last-toogle-bg.png') left no-repeat;
+}
+
+.dark .dropdown-menu li:last-child {
+    background:url('../images/last-toogle-dark-bg.png') left no-repeat; 
 }
 
 .header-container .current-menu-item a, 
@@ -183,6 +193,11 @@ header {
     background:url('../images/search-icon.png') right no-repeat;
 }
 
+.single-header .search_bar {
+    border: 1px solid #000000;
+    background:url('../images/search-icon-dark.png') right no-repeat;
+}
+
 .search_bar input {
     height:42px;
     background: transparent;
@@ -190,6 +205,14 @@ header {
     color:#ffffff;
     width:100%;
     max-width:160px;
+}
+
+.search_bar .dark {
+    border: 1px solid #000000;
+}
+
+.single-header .search-input {
+    color:#000000;
 }
 
 .search_bar input:focus {
@@ -206,6 +229,10 @@ header {
     margin:0.5rem 0rem;
 }
 
+.single-header .contact-menu {
+    background:url('../images/contact-menu-dark-bg.png') center center no-repeat;
+}
+
 .langswitch-menu {
     width:auto;
     height:42px;
@@ -217,6 +244,11 @@ header {
     text-transform:uppercase;
     
 }
+
+.single-header .langswitch-menu {
+    color:#000000;
+}
+
 .langswitch-menu:link,
 .langswitch-menu:visited,
 .langswitch-menu:hover,

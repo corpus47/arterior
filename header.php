@@ -16,10 +16,12 @@
 if(get_post_type() == "page") {
 
     $dark_menu = "";
+    $single_header = "";
 
 } else {
 
     $dark_menu = " dark";
+    $single_header = " single-header";
 
 }
 
@@ -28,7 +30,7 @@ if(get_post_type() == "page") {
 <body>
     <div class="main-container">
         <header>
-            <div class="header-container">
+            <div class="header-container<?php echo $single_header;?>">
                 <div class="logo">
                     <a href="<?php echo home_url();?>">
                         <?php if(get_post_type() == "page"):?>
@@ -59,11 +61,11 @@ if(get_post_type() == "page") {
                             ?>
                     </div>
                 </nav>
-                <div class="search_bar">
+                <div class="search_bar<?php echo $dark_menu;?>">
                     <input name="search_bar" class="search-input" type="text" />
                 </div>
-                <a class="contact-menu scroll-to-target" href="#kapcsolat" ></a>
-                <a class="langswitch-menu" href="#">hu</a>
+                <a class="contact-menu scroll-to-target<?php echo $dark_menu;?>" href="#kapcsolat" ></a>
+                <a class="langswitch-menu<?php echo $dark_menu;?>" href="#">hu</a>
             </div>
             <?php 
             

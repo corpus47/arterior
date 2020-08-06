@@ -187,7 +187,12 @@
     });
     $('.dropdown').hover(function () {
       $(this).find('.dropdown-menu').addClass('show');
-      $(this).find(".nav-link").css("border", "1px solid #ffffff");
+
+      if (object_name.front_page == 1) {
+        $(this).find(".nav-link").css("border", "1px solid #ffffff");
+      } else {
+        $(this).find(".nav-link").css("border", "1px solid #000000");
+      }
     });
     $('.dropdown-menu').mouseleave(function () {
       if ($(".dropdown-menu").hasClass("show")) {
