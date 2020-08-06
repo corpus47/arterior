@@ -1008,3 +1008,41 @@ function referencia_grid() {
 }
 
 add_shortcode('referencia_grid','referencia_grid');
+
+function single_slider_images($post_id = NULL) {
+
+  global $dynamic_featured_image;
+
+  if($post_id == NULL) {
+    return false;
+  }
+
+  $post = get_post($post_id);
+
+  $return = NULL;
+
+  $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'single-post-thumbnail' );
+
+  if(is_array($image)) {
+    $return[] = $image[0];
+  }
+
+  if( class_exists('Dynamic_Featured_Image') ):
+
+    //global $dynamic_featured_image;
+    //global $post;
+
+    $featured_images = $dynamic_featured_image->get_featured_images( $post->ID );
+
+     if ( $featured_images ):
+        foreach( $featured_images as $images ):
+          $return[] = $images['full'];
+        endforeach;
+      endif;
+
+  endif;
+
+  return $return;
+
+
+}
