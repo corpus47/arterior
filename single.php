@@ -1,5 +1,5 @@
 <?php get_header();?>
-<div class="single-post">
+<div class="single-page-post">
     <?php
     while( have_posts() ):
 

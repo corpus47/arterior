@@ -664,15 +664,19 @@
     background:url('../images/gld_link.png') left center no-repeat;
 }
 
-.single-post {
+.single-page-post {
     padding:10rem 5rem 1.5rem 5rem;
-    background:url('../images/single-page-bg.jpg') center top repeat-y;
+    background:url('../images/single-page-bg.jpg') center top;
     background-size:cover;
-    margin-bottom:6rem;
+    background-repeat:repeat-y;
+    position:relative;
+    width:100%;
+    display:inline-block;
 }
 
-.single-post h1 {
+.single-page-post h1 {
     padding-bottom:1.5rem;
+    color:#000000;
 }
 
 .single-slider-container{
@@ -694,26 +698,28 @@
     margin:0 auto;
 }
 
-.single-post .single-content {
+/*.single-post .single-content {
     width:100%;
     position:relative;
     float:left;
 
-}
+}*/
 
-.single-post .content-div {
+.single-page-post .content-div {
     position:relative;
     width:100%;
     height:auto;
+    display:block;
+    color:#000000;
 }
 
-.content-div .left-content {
+.single-page-post .content-div .left-content {
     position:relative;
     width:100%;
     max-width:75%;
     float:left;
 }
-.content-div .right-content {
+.simgle-page-post .content-div .right-content {
     position:relative;
     float:left;
     width:100%;
