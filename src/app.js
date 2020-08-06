@@ -1,6 +1,51 @@
 (function($) {
 
 $(document).ready(function(){
+
+  // Ugrás a főoldalra másik oldalról
+
+  // The speed of the scroll in milliseconds
+
+  console.log(object_name.site_url);
+
+  if(object_name.front_page == 0) {
+    $('.dropdown-item').each(function(){
+      var currentHref = $(this).attr('href');
+
+      var newHref = object_name.site_url + currentHref;
+
+      console.log(newHref);
+
+      $(this).attr('href', newHref);
+
+    });
+    $('.contact-menu').each(function(){
+      var currentHref = $(this).attr('href');
+
+      var newHref = object_name.site_url + currentHref;
+
+      console.log(newHref);
+
+      $(this).attr('href', newHref);
+
+    });
+  }
+
+  const speed = 1000;
+
+    $('a[href*="#"]')
+    .filter((i, a) => a.getAttribute('href').startsWith('#') || a.href.startsWith(`${location.href}#`))
+    .unbind('click.smoothScroll')
+    .bind('click.smoothScroll', event => {
+      const targetId = event.currentTarget.getAttribute('href').split('#')[1];
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        event.preventDefault();
+        $('html, body').animate({ scrollTop: $(targetElement).offset().top }, speed);
+      }
+    });
+
     $('.slider-container').slick({
         autoplay: false,
         dots:true,
@@ -97,16 +142,21 @@ $(document).ready(function(){
 
     $('.dropdown-item').addClass('scroll-to-target');
 
-    $('.scroll-to-target').click(function(event){
+    /*$('.scroll-to-target').click(function(event){
       //var target = $(this).data('id');
       var href = $(this).attr('href');
       
-      target = href.substr(1,href.length);
+      //var target = href.substr(1,href.length);
+
+      var target = href.substr(href.search('#')+1,href.length)
+
+      var current_url = href.substr(0,href.search('#')-1);
 
       //console.log($('[id=' + target + ']').offset());
    
       event.preventDefault();
 
+      console.log(event);
 
       $('html, body').animate ({ scrollTop: $('[id=' + target + ']').offset().top}, 'slow');
       //$('.dropdown').removeClass('open');
@@ -119,7 +169,7 @@ $(document).ready(function(){
       }
    
       return false;
-    });
+    });*/
 
     $('.scroll-to-top').click (function (event) {
       event.preventDefault();
@@ -454,7 +504,7 @@ $(document).ready(function(){
 
   });
 
-  $('.bimgo-gdl-slider-container').slick({
+  $('.bimgo-gdl-slider').slick({
     autoplay: false,
     dots:false,
     arrows:true,
@@ -504,6 +554,7 @@ $(document).ready(function(){
     });
       
   });
+
 
 })(jQuery);
 

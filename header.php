@@ -50,7 +50,7 @@
 
             //var_export($post->post_name);
 
-            if(is_front_page() || $post->post_name == "bimgo"):
+            /*if(is_front_page() || $post->post_name == "bimgo"):*/
             
             ?>
             <div class="slider-container"> 
@@ -87,7 +87,9 @@
                 <?php endwhile; ?>
 
             </div>
-            <?php endif;?>
+
+            <?php /*endif;*/?>
+
         </header>
         <div class="content">
 

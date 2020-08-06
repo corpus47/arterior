@@ -95,6 +95,39 @@
 
 (function ($) {
   $(document).ready(function () {
+    // Ugrás a főoldalra másik oldalról
+    // The speed of the scroll in milliseconds
+    console.log(object_name.site_url);
+
+    if (object_name.front_page == 0) {
+      $('.dropdown-item').each(function () {
+        var currentHref = $(this).attr('href');
+        var newHref = object_name.site_url + currentHref;
+        console.log(newHref);
+        $(this).attr('href', newHref);
+      });
+      $('.contact-menu').each(function () {
+        var currentHref = $(this).attr('href');
+        var newHref = object_name.site_url + currentHref;
+        console.log(newHref);
+        $(this).attr('href', newHref);
+      });
+    }
+
+    var speed = 1000;
+    $('a[href*="#"]').filter(function (i, a) {
+      return a.getAttribute('href').startsWith('#') || a.href.startsWith("".concat(location.href, "#"));
+    }).unbind('click.smoothScroll').bind('click.smoothScroll', function (event) {
+      var targetId = event.currentTarget.getAttribute('href').split('#')[1];
+      var targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: $(targetElement).offset().top
+        }, speed);
+      }
+    });
     $('.slider-container').slick({
       autoplay: false,
       dots: true,
@@ -177,26 +210,29 @@
       }
     });
     $('.dropdown-item').addClass('scroll-to-target');
-    $('.scroll-to-target').click(function (event) {
+    /*$('.scroll-to-target').click(function(event){
       //var target = $(this).data('id');
       var href = $(this).attr('href');
-      target = href.substr(1, href.length); //console.log($('[id=' + target + ']').offset());
-
+      
+      //var target = href.substr(1,href.length);
+        var target = href.substr(href.search('#')+1,href.length)
+        var current_url = href.substr(0,href.search('#')-1);
+        //console.log($('[id=' + target + ']').offset());
+    
       event.preventDefault();
-      $('html, body').animate({
-        scrollTop: $('[id=' + target + ']').offset().top
-      }, 'slow'); //$('.dropdown').removeClass('open');
-
-      if ($(".dropdown-menu").hasClass("show")) {
-        setTimeout(function () {
-          ///workaround
-          $(".dropdown-menu").removeClass("show");
-          $(".dropdown").find(".nav-link").css("border", "1px solid transparent");
+        console.log(event);
+        $('html, body').animate ({ scrollTop: $('[id=' + target + ']').offset().top}, 'slow');
+      //$('.dropdown').removeClass('open');
+        if( $(".dropdown-menu").hasClass("show")) {
+        setTimeout(function(){///workaround
+            $(".dropdown-menu").removeClass("show");
+            $(".dropdown").find(".nav-link").css("border","1px solid transparent");
         }, 10);
       }
-
+    
       return false;
-    });
+    });*/
+
     $('.scroll-to-top').click(function (event) {
       event.preventDefault();
       $('html, body').animate({
@@ -479,7 +515,7 @@
         }
       }
     });
-    $('.bimgo-gdl-slider-container').slick({
+    $('.bimgo-gdl-slider').slick({
       autoplay: false,
       dots: false,
       arrows: true,

@@ -24,6 +24,13 @@ function load_scripts() {
     wp_enqueue_script('app');
 
     $translation_array = array( 'templateUrl' => get_stylesheet_directory_uri() );
+
+    if(is_front_page()) {
+      $translation_array['front_page']= 1;
+    } else {
+      $translation_array['front_page']= 0;
+      $translation_array['site_url']= get_site_url();
+    }
     //after wp_enqueue_script
     wp_localize_script( 'app', 'object_name', $translation_array );
 
@@ -902,7 +909,12 @@ function gdl_slider() {
 
   $loop = new WP_Query( array( 'post_type' => 'gld_files', 'posts_per_page' => 10 ) );
 
-  ?><div class="bimgo-gdl-slider-container"><?php
+  ?>
+
+  <div class="bimgo-gdl-slider-container">
+    <div class="bimgo-gdl-slider">  
+  
+  <?php
 
   while ( $loop->have_posts() ) : $loop->the_post();
 
@@ -926,7 +938,12 @@ function gdl_slider() {
 
   endwhile;
 
-  ?></div><?php
+  ?>
+
+  </div><!-- end bimgo gdl slider -->
+</div><!-- end bimgo-gdl-slider-container -->
+
+<?php
 
   $content = ob_get_contents();
 
