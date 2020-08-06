@@ -953,3 +953,58 @@ function gdl_slider() {
 }
 
 add_shortcode('gdl_slider','gdl_slider');
+
+
+function referencia_grid() {
+
+  ob_start();
+
+  ?><?php
+
+  $loop = new WP_Query( array( 'post_type' => 'referencia', 'posts_per_page' => 10 ) );
+
+  while ( $loop->have_posts() ) : $loop->the_post();
+
+  ?>
+
+  <!--<div class="referencia-grid-container">-->
+  <div class="referencia-grid-container-elem">
+    
+  <?php
+  $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'single-post-thumbnail' );
+  ?>
+  <div class="link-container">
+    <a href="<?php echo get_permalink();?>" class="referencia-grid-link">
+      <div class="link-inner">
+        <h3><?php the_title();?></h3>
+        <p><?php the_excerpt();?></p>
+      </div>
+    </a>
+    <img src="<?php echo $image[0];?>" />
+  </div>
+  <?php
+  ?>
+
+  </div><!-- end referencia grid container elem -->
+<!--</div>--><!-- end referencia-grid-container -->
+
+  <?php
+
+  ?><?php
+
+  endwhile;
+
+  ?>
+  <div class="morebutton-container">
+    <a class="referenciak-more" href="#"><?php echo __("MÉG TÖBB");?></a>
+  </div>
+  <?php
+
+  $content = ob_get_contents();
+
+  ob_end_clean();
+
+  return $content;
+}
+
+add_shortcode('referencia_grid','referencia_grid');

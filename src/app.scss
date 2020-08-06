@@ -197,7 +197,7 @@ section h1, section p {
     opacity .5s, visibility .5s;
   opacity: 0;
   visibility: hidden;
-  z-index: 1000;
+  z-index: 999999999999;
 }
 
 .scroll-to-top:hover {

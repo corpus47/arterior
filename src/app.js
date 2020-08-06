@@ -47,7 +47,7 @@ $(document).ready(function(){
     });
 
     $('.slider-container').slick({
-        autoplay: false,
+        autoplay: true,
         dots:true,
         customPaging : function(slider, i) {
             return '<a href="#"><img src="'+object_name.templateUrl+'/images/slide-dot.png" /><img src="'+object_name.templateUrl+'/images/slide-dot-active.png" /></a>';
