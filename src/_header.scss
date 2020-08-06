@@ -34,6 +34,10 @@ header {
     text-transform:uppercase;
 }
 
+.dark .nav-link {
+    color:#000000 !important;
+}
+
 .navbar-light .navbar-nav a:active {
     font-weight:bold;
 }
@@ -41,6 +45,15 @@ header {
 .navbar-light .navbar-nav .nav-link:hover {
     color:#ffffff;
 }
+
+.dark .navbar-nav .nav-link:hover,
+.dark .navbar-nav .nav-link:visited {
+    color:#000000 !important;
+}
+
+/*#menu-fomenu .dark ul.nav li a, ul.nav li a:visited {
+    color:#000000 !important;
+}*/
 
 .navbar {
     padding:0.5rem 0px;
@@ -67,13 +80,27 @@ header {
 .menu-item a:hover {
     color:#ffffff;
 }
+
+.dark .menu-item a:hover {
+    color:#000000 !important;
+}
+
 .menu-item a:active {
     color:#ffffff;
+}
+
+.dark .menu-item a:active {
+    color:#000000 !important;
 }
 
 .nav-link:hover {
     border:1px solid #ffffff;
 }
+
+.dark .nav-link:hover {
+    border:1px solid #000000;
+}
+
 .navbar-brand {
     background:url('../images/hamb-menu.png') center center no-repeat;
     display:block;
@@ -103,19 +130,30 @@ header {
     font-weight:normal !important;
 }
 
+.dark .dropdown-menu a {
+    color:#000000 !important;
+}
+
 .dropdown-menu a:hover {
     color:#ffffff;
     background-color:transparent;
     background:url('../images/toogle-bg-hover.png') left no-repeat;
-}   
+}
+
+.dark .dropdown-menu a:hover {
+    color:#000000 !important;
+}
 
 .dropdown-menu li:first-child {
     padding-top:1rem;
     
 }
 .dropdown-menu li {
-    border-left:1px solid #ffffff;
-    
+    border-left:1px solid #ffffff;   
+}
+
+.dark .dropdown-menu li {
+    border-left:1px solid #000000; 
 }
 
 .dropdown-menu li:last-child {

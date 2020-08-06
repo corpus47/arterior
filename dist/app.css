@@ -10046,6 +10046,10 @@ header {
   text-transform: uppercase;
 }
 
+.dark .nav-link {
+  color: #000000 !important;
+}
+
 .navbar-light .navbar-nav a:active {
   font-weight: bold;
 }
@@ -10054,6 +10058,14 @@ header {
   color: #ffffff;
 }
 
+.dark .navbar-nav .nav-link:hover,
+.dark .navbar-nav .nav-link:visited {
+  color: #000000 !important;
+}
+
+/*#menu-fomenu .dark ul.nav li a, ul.nav li a:visited {
+    color:#000000 !important;
+}*/
 .navbar {
   padding: 0.5rem 0px;
   max-width: 1270px !important;
@@ -10082,12 +10094,24 @@ header {
   color: #ffffff;
 }
 
+.dark .menu-item a:hover {
+  color: #000000 !important;
+}
+
 .menu-item a:active {
   color: #ffffff;
 }
 
+.dark .menu-item a:active {
+  color: #000000 !important;
+}
+
 .nav-link:hover {
   border: 1px solid #ffffff;
+}
+
+.dark .nav-link:hover {
+  border: 1px solid #000000;
 }
 
 .navbar-brand {
@@ -10119,10 +10143,18 @@ header {
   font-weight: normal !important;
 }
 
+.dark .dropdown-menu a {
+  color: #000000 !important;
+}
+
 .dropdown-menu a:hover {
   color: #ffffff;
   background-color: transparent;
   background: url("../images/toogle-bg-hover.png") left no-repeat;
+}
+
+.dark .dropdown-menu a:hover {
+  color: #000000 !important;
 }
 
 .dropdown-menu li:first-child {
@@ -10131,6 +10163,10 @@ header {
 
 .dropdown-menu li {
   border-left: 1px solid #ffffff;
+}
+
+.dark .dropdown-menu li {
+  border-left: 1px solid #000000;
 }
 
 .dropdown-menu li:last-child {
@@ -10906,6 +10942,10 @@ header {
   background: url("../images/gld_link.png") left center no-repeat;
 }
 
+.single-post {
+  margin-top: 12rem;
+}
+
 pre {
   color: yellow;
 }
@@ -11187,7 +11227,7 @@ section h1, section p {
   transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
   opacity: 0;
   visibility: hidden;
-  z-index: 1000;
+  z-index: 999999999999;
 }
 
 .scroll-to-top:hover {

@@ -10,14 +10,35 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 </head>
+
+<?php
+
+if(get_post_type() == "page") {
+
+    $dark_menu = "";
+
+} else {
+
+    $dark_menu = " dark";
+
+}
+
+?>
+
 <body>
     <div class="main-container">
         <header>
             <div class="header-container">
                 <div class="logo">
-                    <a href="<?php echo home_url();?>"><img src="<?php echo get_template_directory_uri();?>/images/arterior-logo-footer.png" /></a>
+                    <a href="<?php echo home_url();?>">
+                        <?php if(get_post_type() == "page"):?>
+                        <img src="<?php echo get_template_directory_uri();?>/images/arterior-logo-footer.png" />
+                        <?php else:?>
+                            <img src="<?php echo get_template_directory_uri();?>/images/arterior-logo-footer-black.png" />
+                        <?php endif;?>
+                    </a>
                 </div>
-                <nav class="navbar navbar-expand-md navbar-light bg-bone" role="navigation">
+                <nav class="navbar navbar-expand-md navbar-light bg-bone<?php echo $dark_menu;?>" role="navigation">
                     <div class="container">
                         <!-- Brand and toggle get grouped for better mobile display -->
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'your-theme-slug' ); ?>">
@@ -51,6 +72,10 @@
             //var_export($post->post_name);
 
             /*if(is_front_page() || $post->post_name == "bimgo"):*/
+
+            //var_dump(get_post_type());
+
+            if(get_post_type() == "page"):
             
             ?>
             <div class="slider-container"> 
@@ -88,7 +113,7 @@
 
             </div>
 
-            <?php /*endif;*/?>
+            <?php endif;?>
 
         </header>
         <div class="content">
