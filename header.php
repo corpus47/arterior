@@ -61,11 +61,13 @@ if(get_post_type() == "page") {
                             ?>
                     </div>
                 </nav>
+                <div class="right-container">
                 <div class="search_bar<?php echo $dark_menu;?>">
                     <input name="search_bar" class="search-input" type="text" />
                 </div>
                 <a class="contact-menu scroll-to-target<?php echo $dark_menu;?>" href="#kapcsolat" ></a>
                 <a class="langswitch-menu<?php echo $dark_menu;?>" href="#">hu</a>
+                </div>
             </div>
             <?php 
             
