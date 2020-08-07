@@ -1046,3 +1046,14 @@ function single_slider_images($post_id = NULL) {
 
 
 }
+
+function need_slider($post_id = NULL) {
+
+  if(get_post_type($post_id) == 'page' && get_field('slider_mutatasa',$post_id) !== false) {
+    //echo 'igen';
+    return true;
+  } else {
+    //echo 'nem';
+    return false;
+  }
+}

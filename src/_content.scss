@@ -692,7 +692,7 @@
     position:relative;
     display:inline-block;
     margin:0 auto;
-    padding-top:5rem;
+    /*padding-top:5rem;*/
 }
 
 .single-slider .slick-next {
@@ -760,6 +760,15 @@
     float:left;
     width:100%;
     max-width:25%;
+}
+
+.content .panel-layout .no-page-slider {
+    position:relative;
+    width:100%;
+    height:auto;
+    margin:0;
+    padding:10rem 3rem 3rem 3rem !important;
+    color:black;
 }
 
 pre {

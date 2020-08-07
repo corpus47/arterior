@@ -16,10 +16,13 @@
             </section>
         <?php
             $image = get_field('lablec_hatterkep');
+            //echo "Itt"; var_dump($image);
             if(!$image) {
                 $image = get_template_directory_uri()."/images/footer-bg-belsoepiteszet.jpg";
             }
         ?>
+        <?php else: ?>
+            <?php $image = get_template_directory_uri()."/images/footer-bg-belsoepiteszet.jpg"; ?>
         <?php endif;?>
         <footer style="background:url('<?php echo $image; ?>') no-repeat;background-size:cover;">
             <?php

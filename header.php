@@ -13,7 +13,10 @@
 
 <?php
 
-if(get_post_type() == "page") {
+//need_slider(get_the_ID());
+
+//if(get_post_type() == "page") {
+if(need_slider(get_the_ID())) {
 
     $dark_menu = "";
     $single_header = "";
@@ -33,7 +36,8 @@ if(get_post_type() == "page") {
             <div class="header-container<?php echo $single_header;?>">
                 <div class="logo">
                     <a href="<?php echo home_url();?>">
-                        <?php if(get_post_type() == "page"):?>
+                        <?php //if(get_post_type() == "page"):?>
+                        <?php if(need_slider(get_the_ID()) == "page"):?>
                         <img src="<?php echo get_template_directory_uri();?>/images/arterior-logo-footer.png" />
                         <?php else:?>
                             <img src="<?php echo get_template_directory_uri();?>/images/arterior-logo-footer-black.png" />
@@ -79,7 +83,8 @@ if(get_post_type() == "page") {
 
             //var_dump(get_post_type());
 
-            if(get_post_type() == "page"):
+            //if(get_post_type() == "page"):
+            if(need_slider(get_the_ID())):
             
             ?>
             <div class="slider-container"> 
