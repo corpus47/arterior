@@ -49,6 +49,9 @@ $(document).ready(function(){
     $('.single-slider').slick({
         autoplay: false,
         dots:true,
+        customPaging : function(slider, i) {
+          return '<a href="#"><img src="'+object_name.templateUrl+'/images/slide-dot-dark.png" /><img src="'+object_name.templateUrl+'/images/slide-dot-dark-active.png" /></a>';
+        },
         arrows:true,
         slidesToShow: 1,
         slidesToScroll: 1,

@@ -11007,6 +11007,39 @@ header {
   background: none;
 }
 
+.single-slider {
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  padding-top: 5rem;
+}
+
+.single-slider .slick-next {
+  right: -4.9rem;
+}
+.single-slider .slick-next:before {
+  content: url("../images/single-right.png");
+}
+[dir=rtl] .single-slider .slick-next:before {
+  content: url("../images/single-left.png");
+}
+
+.single-slider .slick-prev {
+  left: -5rem;
+}
+.single-slider .slick-prev:before {
+  content: url("../images/single-left.png");
+}
+[dir=rtl] .single-slider .slick-prev:before {
+  content: url("../images/single-right.png");
+}
+
+.single-slider .slick-dots {
+  bottom: -5%;
+}
+
 .single-slider .slide-div {
   width: 100%;
   position: relative;
