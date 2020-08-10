@@ -11089,6 +11089,24 @@ header {
   color: black;
 }
 
+.has-cookie-bar #catapult-cookie-bar {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+#catapult-cookie-bar .gdpr-cookie-bar .ctcc-left-side {
+  max-width: 750px;
+  text-align: center;
+  padding: 0rem 3rem;
+}
+
+.gdpr-cookie-bar .ctcc-right-side #catapultCookie {
+  background-color: #000000;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  border-radius: 0;
+  padding: 0.25rem 3rem;
+}
+
 pre {
   color: red;
 }
