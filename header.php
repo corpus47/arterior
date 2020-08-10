@@ -79,8 +79,21 @@ if(function_exists('arterior_user_popup')) {
                 <div class="search_bar<?php echo $dark_menu;?>">
                     <input name="search_bar" class="search-input" type="text" />
                 </div>
-                
-                <a class="user-menu<?php echo $dark_menu;?>" href="javascript:void(0);"></a>
+                <?php
+                if(is_user_logged_in()) {
+                    $logged = 1;
+                    if($dark_menu == "") {
+                        $style_logged = " logged_white";
+                    } else {
+                        $style_logged = " logged_dark";
+                    }
+                    
+                } else {
+                    $logged = 0;
+                    $style_logged = "";
+                }
+                ?>
+                <a class="user-menu<?php echo $dark_menu;echo $style_logged;?>" href="javascript:void(0);" data-user-logged="<?php echo $logged;?>" ></a>
                 <a class="langswitch-menu<?php echo $dark_menu;?>" href="#">hu</a>
                 </div>
             </div>
