@@ -76,28 +76,41 @@ if(function_exists('arterior_user_popup')) {
                     </div>
                 </nav>
                 <div class="right-container">
-                <div class="search_bar<?php echo $dark_menu;?>">
-                <form role="search" method="get" id="searchform" class="searchform" action="<?php echo home_url('/');?>">
-                    <input id="s" name="s" class="search-input" type="text" />
-                </form>
-                </div>
-                <?php
-                if(is_user_logged_in()) {
-                    $logged = 1;
-                    if($dark_menu == "") {
-                        $style_logged = " logged_white";
-                    } else {
-                        $style_logged = " logged_dark";
-                    }
+                    <div class="search_bar<?php echo $dark_menu;?>">
+                    <form role="search" method="get" id="searchform" class="searchform" action="<?php echo home_url('/');?>">
+                        <input id="s" name="s" class="search-input" type="text" />
+                        <a href="javascript:void(0);" class="go-search"></a>
+                    </form>
                     
-                } else {
-                    $logged = 0;
-                    $style_logged = "";
-                }
-                ?>
-                <a class="user-menu<?php echo $dark_menu;echo $style_logged;?>" href="javascript:void(0);" data-user-logged="<?php echo $logged;?>" ></a>
-                <a class="langswitch-menu<?php echo $dark_menu;?>" href="#">hu</a>
+                    </div>
+                    <?php
+                    if(is_user_logged_in()) {
+                        $logged = 1;
+                        if($dark_menu == "") {
+                            $style_logged = " logged_white";
+                        } else {
+                            $style_logged = " logged_dark";
+                        }
+                        
+                    } else {
+                        $logged = 0;
+                        $style_logged = "";
+                    }
+                    ?>
+                    
+                    <a class="user-menu<?php echo $dark_menu;echo $style_logged;?>" href="javascript:void(0);" data-user-logged="<?php echo $logged;?>" ></a>
+                    <a class="langswitch-menu<?php echo $dark_menu;?>" href="#">hu</a>
+                    <a class="mobile-search<?php echo $dark_menu;?>" href="javascript:void(0);"></a>
+                    <a class="hambi-menu<?php echo $dark_menu;?>" href="javascript:void(0);"></a>
                 </div>
+            </div>
+            <div class="mobile-search-container">
+                <div class="search_bar<?php echo $dark_menu;?>">
+                    <form role="search" method="get" id="searchform" class="searchform" action="<?php echo home_url('/');?>">
+                        <input id="s" name="s" class="search-input" type="text" />
+                        <a href="javascript:void(0);" class="go-search"></a>
+                    </form>
+            </div>
             </div>
             <?php 
             

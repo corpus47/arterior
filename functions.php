@@ -52,7 +52,8 @@ function wpb_custom_new_menu() {
     register_nav_menus(
       array(
         'main_menu' => __( 'Főmenü' ),
-        'footer_menu' => __( 'Footer menu' )
+        'footer_menu' => __( 'Footer menü' ),
+        'mobile_menu' => __('Mobil menü'),
       )
     );
   }

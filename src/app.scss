@@ -192,7 +192,7 @@ section h1, section p {
   text-align: center;
   border-radius: 4px;
   position: fixed;
-  bottom: 30px;
+  bottom: 100px;
   right: 30px;
   transition: background-color .3s, 
     opacity .5s, visibility .5s;
@@ -241,6 +241,95 @@ section h1, section p {
   height:auto;
 }
 
+
+
+@media (max-width:450px) {
+  /*.logo {
+    padding-left:10px !important;
+    margin-right:0 !important;
+    width:auto !important;
+  }
+  .right-container {
+    padding-right:10px !important;
+  }*/
+}
+
+@media (max-width:480px) {
+  .slider-container .slide-div h1 {
+    font-size:1rem !important;
+    top:30% !important;
+  }
+}
+
+@media (max-width:540px) {
+  .logo {
+    padding-left:10px !important;
+    margin-right:0 !important;
+    width:auto !important;
+  }
+  .right-container {
+    padding-right:10px !important;
+  }
+}
+
+@media (max-width:600px) {
+
+  .egyedibutor-container .egyedibutor-container-elem,
+  .referencia-grid-container .referencia-grid-container-elem {
+    max-width:100% !important;
+  }
+  .home-section .textwidget {
+    margin:1rem;
+  }
+  .footer-logo {
+    width:100% !important;
+  }
+  .copy {
+    width: 100% !important;
+  }
+  .social {
+    width: 100% !important;
+  }
+}
+
+@media (max-width:960px) {
+    .navbar {
+      display:none;
+    }
+    .hambi-menu {
+      display:block;
+    }
+    .slider-container .slide-div h1 {
+      font-size:1.5rem !important;
+      top:30% !important;
+    }
+    .slider-container .slide-div h1 p {
+      padding:0 20px;
+    }
+    .slider-container .slick-prev {
+      left:10px;
+    }
+    .slider-container .slick-next {
+      right:10px;
+    }
+    /*.search_bar {
+      display:block !important;
+    }
+    .mobile-search-container {
+      display:none !important;
+    }
+    .header-container .right-container {
+      min-width:420px !important;
+    }*/
+    .egyedibutor-container .egyedibutor-container-elem,
+    .referencia-grid-container .referencia-grid-container-elem {
+      max-width:50%;
+    }
+    .footer-logo, .copy, .social {
+      max-width:100%;
+    }
+}
+
 @media (min-width: 1200px) {
   .container-xl, .container-lg, .container-md, .container-sm, .main-container {
       max-width: 1920px;
@@ -250,6 +339,36 @@ section h1, section p {
   }
 }
 
+@media (max-width:1260px) {
+    .navbar-brand {
+        //display:block;
+    }
+    .header-container .logo {
+      //margin-right:0;
+    }
+    .navbar {
+      //float:right;
+    }
+    .right-container .search_bar {
+      display:none;
+    }
+    .slider-container .slide-div h1 {
+      font-size:2rem;
+    }
+    .mobile-search {
+      display:block;
+    }
+    /*.mobile-search-container {
+      display:flex;
+    }*/
+    .header-container .right-container {
+      //float:left;
+      min-width:unset;
+      padding-right:57px;
+    }
+}
+
+
 @media (max-width:1380px) {
   .header-container {
     max-width:1380px;
@@ -257,6 +376,7 @@ section h1, section p {
   .navbar {
     max-width:700px !important;
   }
+  
   .home-referencia-slider .slide-div img,
   .home-butorforgalmazas-slider .slide-div img {
     /*max-width:320px;*/

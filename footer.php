@@ -48,7 +48,15 @@
         <a class="scroll-to-top"></a>
         <?php /*endif;*/?>
     </div><!-- end main-container -->
-
+    <div class="mobile-menu-container">
+        <span class="close"></span>
+        <?php
+        wp_nav_menu( array( 
+            'theme_location' => 'mobile_menu', 
+            'container_class' => 'mobile-menu-class' ) 
+        ); 
+        ?>
+    </div>
 <?php wp_footer();?>
 
 </body>

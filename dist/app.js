@@ -139,7 +139,7 @@
       slidesToScroll: 1
     });
     $('.slider-container').slick({
-      autoplay: true,
+      autoplay: false,
       dots: true,
       customPaging: function customPaging(slider, i) {
         return '<a href="#"><img src="' + object_name.templateUrl + '/images/slide-dot.png" /><img src="' + object_name.templateUrl + '/images/slide-dot-active.png" /></a>';
@@ -175,13 +175,15 @@
           dots: false
         }
       }, {
-        breakpoint: 600,
+        /*breakpoint: 600,*/
+        breakpoint: 960,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2
         }
       }, {
-        breakpoint: 480,
+        /*breakpoint: 480,*/
+        breakpoint: 600,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
@@ -307,13 +309,15 @@
           dots: false
         }
       }, {
-        breakpoint: 600,
+        /*breakpoint: 600,*/
+        breakpoint: 960,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2
         }
       }, {
-        breakpoint: 480,
+        /*breakpoint: 480,*/
+        breakpoint: 600,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
@@ -565,6 +569,33 @@
       // settings: "unslick"
       // instead of a settings object
       ]
+    });
+    $('.go-search').live('click', function () {
+      //alert('itt');
+      $(this).parent().submit(); //return false;
+    });
+    $('.mobile-search').live('click', function () {
+      if ($('.mobile-search-container').is(':visible')) {
+        $('.mobile-search-container').hide();
+      } else {
+        $('.mobile-search-container').show();
+      }
+    });
+    $('.hambi-menu').live('click', function () {
+      //if($('.mobile-menu-container').is(':visible')) {
+      //$('.mobile-menu-container').hide();
+      //} else {
+      $('.mobile-menu-container').show(); //}
+    });
+    $('.mobile-menu-container').find('.close').live('click', function () {
+      if ($('.mobile-menu-container').is(':visible')) {
+        $('.mobile-menu-container').hide();
+      }
+    });
+    $('.mobile-menu-class .menu-item a').live('click', function () {
+      //alert('itt');
+      $('.mobile-menu-container').hide();
+      return true;
     });
     var $loading = $('.ajax-load').hide();
     $(document).ajaxStart(function () {

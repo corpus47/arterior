@@ -400,6 +400,10 @@
 .filter-container .filters-search .search_bar input {
     max-width:100%;
     padding-right:50px;
+    background:transparent none;
+    border:none;
+    height:42px;
+    color:#ffffff;
 }
 
 .filter-container .filters-search .search_bar .click-button {

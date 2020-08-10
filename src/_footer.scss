@@ -23,19 +23,30 @@ footer {
 footer .info-container {
     position:relative;
     padding:75px 0;
+    display:block;
+    width:100%;
+    height:auto;
 }
 
 footer .info-container .cell {
     width:100%;
-    display:block;
+    display:inline-block;
     float:left;
     margin:0;
     padding:0;
     text-align:center;
+    height:auto;
 }
 
 .footer-logo {
     max-width:20%;
+}
+
+.footer-logo a {
+    position:relative;
+    display:inline-block;
+    width:auto;
+    height:auto;
 }
 
 .social {
