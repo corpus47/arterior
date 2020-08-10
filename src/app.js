@@ -560,6 +560,7 @@ $(document).ready(function(){
 });
 
   var $loading = $('.ajax-load').hide();
+  
   $(document)
     .ajaxStart(function () {
       $loading.show();

@@ -229,7 +229,7 @@ header {
 .search_bar input:focus {
     outline: none;
 }
-.contact-menu {
+.user-menu {
     width:100px;
     height:42px;
     position:relative;
@@ -240,7 +240,7 @@ header {
     margin:0.5rem 0rem;
 }
 
-.single-header .contact-menu {
+.single-header .user-menu {
     background:url('../images/contact-menu-dark-bg.png') center center no-repeat;
 }
 

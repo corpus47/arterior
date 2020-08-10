@@ -13,6 +13,8 @@
 
 <?php
 
+
+
 //need_slider(get_the_ID());
 
 //if(get_post_type() == "page") {
@@ -31,7 +33,15 @@ if(need_slider(get_the_ID())) {
 ?>
 
 <body>
+<?php
+
+if(function_exists('arterior_user_popup')) {
+    arterior_user_popup();
+}
+
+?>
     <div class="main-container">
+        
         <header>
             <div class="header-container<?php echo $single_header;?>">
                 <div class="logo">
@@ -69,7 +79,8 @@ if(need_slider(get_the_ID())) {
                 <div class="search_bar<?php echo $dark_menu;?>">
                     <input name="search_bar" class="search-input" type="text" />
                 </div>
-                <a class="contact-menu scroll-to-target<?php echo $dark_menu;?>" href="#kapcsolat" ></a>
+                
+                <a class="user-menu<?php echo $dark_menu;?>" href="javascript:void(0);"></a>
                 <a class="langswitch-menu<?php echo $dark_menu;?>" href="#">hu</a>
                 </div>
             </div>
