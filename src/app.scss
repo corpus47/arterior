@@ -290,6 +290,10 @@ section h1, section p {
   .social {
     width: 100% !important;
   }
+  .so-panel .home-refslider-container {
+    padding:0 1rem;
+  }
+  
 }
 
 @media (max-width:960px) {
@@ -365,6 +369,17 @@ section h1, section p {
       //float:left;
       min-width:unset;
       padding-right:57px;
+    }
+    .filter-container-left {
+      max-width:unset !important;
+    }
+    .home-refslider-container .filters-search {
+      float:unset;
+      left: 50%;
+          -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+      z-index:9999999999;
     }
 }
 

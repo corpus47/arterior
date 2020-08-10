@@ -442,7 +442,8 @@ function home_termekslider($attr)  {
   <?php if(!$xhr):?>
   <div class="filter-container">
   <?php endif;?>
-
+    <div class="filter-container-left">
+    <!--<div style="position:relative;height:auto;width:100%;display:block;float:left;max-width:75%;">-->
     <div class="filter-categories-bar">
     <?php
 
@@ -486,13 +487,13 @@ function home_termekslider($attr)  {
     ?>
     <div id="erase-filters" class="erase-filters-button">szűrő törlése</div>
     </div><!-- end categories-bar -->
-    <div class="filters-search" >
+    <!--<div class="filters-search" >
       <div class="search_bar">
         <input name="search_bar" class="search-input" type="text" />
         <div class="click-button"></div>
       </div>
       <div class="ret_bar"></div>
-    </div>
+    </div>-->
     <div class="filters-elements-container">
       <?php
 
@@ -570,6 +571,16 @@ function home_termekslider($attr)  {
         } 
       ?>
     </div>
+    </div>
+    <!-- Search field -->
+    <div class="filters-search" >
+      <div class="search_bar">
+        <input name="search_bar" class="search-input" type="text" />
+        <div class="click-button"></div>
+      </div>
+      <div class="ret_bar"></div>
+    </div>
+
     <?php //var_export($filters);?>
     <input type="hidden" name="erase-filters-button" value="<?php echo $erase_filters_button;?>" />
     <input type="hidden" name="actcat" value="<?php echo $actcat;?>" />

@@ -153,7 +153,14 @@
     padding-left:3rem;
 }
 
-
+.filter-container .filter-container-left {
+    position:relative;
+    height:auto;
+    width:100%;
+    display:block;
+    float:left;
+    max-width:75%;
+}
 
 .filter-container .filter-categories-bar {
     position:relative;
@@ -164,7 +171,7 @@
     width:100%;
     height:auto;
     display:block;
-    max-width:75%;
+    /*max-width:75%;*/
 }
 
 .filter-container .filter-categories-bar .category-link-container {
