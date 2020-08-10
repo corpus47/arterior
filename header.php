@@ -77,7 +77,9 @@ if(function_exists('arterior_user_popup')) {
                 </nav>
                 <div class="right-container">
                 <div class="search_bar<?php echo $dark_menu;?>">
-                    <input name="search_bar" class="search-input" type="text" />
+                <form role="search" method="get" id="searchform" class="searchform" action="<?php echo home_url('/');?>">
+                    <input id="s" name="s" class="search-input" type="text" />
+                </form>
                 </div>
                 <?php
                 if(is_user_logged_in()) {

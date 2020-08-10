@@ -1049,11 +1049,21 @@ function single_slider_images($post_id = NULL) {
 
 function need_slider($post_id = NULL) {
 
+  //var_dump(is_search());
+
+  $ret = false;
+
   if(get_post_type($post_id) == 'page' && get_field('slider_mutatasa',$post_id) !== false) {
     //echo 'igen';
-    return true;
+    $ret = true;
   } else {
     //echo 'nem';
-    return false;
+    $ret = false;
   }
+  if(is_search()) {
+    $ret = false;
+  }
+  //var_dump($ret);
+  return $ret;
+
 }

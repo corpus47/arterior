@@ -11115,6 +11115,34 @@ header {
   padding: 0.25rem 3rem;
 }
 
+.search-ret-container {
+  color: #000000;
+}
+
+.search-ret-container a {
+  color: #000000 !important;
+}
+
+.search-ret-container img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+}
+
+.news-widget-container {
+  padding: 0 5rem;
+}
+
+.news-widget-container .slick-slide {
+  height: auto;
+}
+
+.news-widget-container .so-widget-sow-post-carousel {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
 pre {
   color: red;
 }
