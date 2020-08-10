@@ -332,6 +332,7 @@ section h1, section p {
     .footer-logo, .copy, .social {
       max-width:100%;
     }
+    
 }
 
 @media (min-width: 1200px) {
@@ -380,6 +381,9 @@ section h1, section p {
           -ms-transform: translateX(-50%);
       transform: translateX(-50%);
       z-index:9999999999;
+    }
+    .referencia-grid-container .referencia-grid-container-elem {
+      max-width:49%;
     }
 }
 

@@ -10295,6 +10295,9 @@ header {
   padding: 0.5rem 0rem;
   margin: 0.5rem 0rem;
 }
+.hambi-menu.dark {
+  background: url("../images/hamb-menu-dark.png") center center no-repeat;
+}
 
 .mobile-search {
   width: 50px;
@@ -10306,6 +10309,9 @@ header {
   background: url("../images/search-icon.png") left center no-repeat;
   padding: 0.5rem 0rem;
   margin: 0.5rem 0rem;
+}
+.mobile-search.dark {
+  background: url("../images/search-icon-dark.png") left center no-repeat;
 }
 
 .single-header .user-menu {
@@ -11311,6 +11317,10 @@ body .mobile-menu-container .mobile-menu-class {
   margin: 0 auto;
 }
 
+.single-slider-container .slick-slide {
+  height: unset;
+}
+
 pre {
   color: red;
 }
@@ -11781,6 +11791,10 @@ section h1, section p {
     left: 50%;
     transform: translateX(-50%);
     z-index: 9999999999;
+  }
+
+  .referencia-grid-container .referencia-grid-container-elem {
+    max-width: 49%;
   }
 }
 @media (max-width: 1380px) {
