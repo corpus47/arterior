@@ -15,7 +15,7 @@
     float:left;
     width: 100%;
     height:auto;
-    min-height:624px;
+    /*min-height:624px;*/
     display:block;
 }
 .home-section a:link, .home-section:active, .home-section:visited, .home-section:hover {
@@ -673,6 +673,10 @@
 
 .bimgo-gdl-slider .slide-div .gld_link {
     background:url('../images/gld_link.png') left center no-repeat;
+}
+
+.bimgo-gdl-slider .slick-slide {
+    height:auto;
 }
 
 .single-page-post {

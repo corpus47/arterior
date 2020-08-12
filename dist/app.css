@@ -10347,7 +10347,7 @@ header {
 
 .slide-div h1 {
   position: absolute;
-  top: 27%;
+  top: 37%;
   width: 100%;
   text-transform: uppercase;
   /*left: 50%;
@@ -10505,7 +10505,7 @@ body .mobile-menu-container .mobile-menu-class {
   float: left;
   width: 100%;
   height: auto;
-  min-height: 624px;
+  /*min-height:624px;*/
   display: block;
 }
 
@@ -11167,6 +11167,10 @@ body .mobile-menu-container .mobile-menu-class {
   background: url("../images/gld_link.png") left center no-repeat;
 }
 
+.bimgo-gdl-slider .slick-slide {
+  height: auto;
+}
+
 .single-page-post {
   padding: 10rem 5rem 1.5rem 5rem;
   background: url("../images/single-page-bg.jpg") center top;
@@ -11436,6 +11440,15 @@ footer .info-container .cell {
   border: 1px solid #ffffff;
 }
 
+.kapcsolat-section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "RalewayLight";
   font-size: 1em;
@@ -11590,7 +11603,7 @@ section h1, section p {
 }
 
 .kapcsolat-section h1 {
-  padding: 1.5rem 0;
+  padding: 2rem 0;
 }
 
 .kapcsolat-section p {
