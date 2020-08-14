@@ -278,6 +278,9 @@ section h1, section p {
   .referencia-grid-container .referencia-grid-container-elem {
     max-width:100% !important;
   }
+  .home-butorforgalmazas-grid .grid-div {
+    max-width:100% !important;
+  }
   .home-section .textwidget {
     margin:1rem;
   }
@@ -328,6 +331,10 @@ section h1, section p {
     .egyedibutor-container .egyedibutor-container-elem,
     .referencia-grid-container .referencia-grid-container-elem {
       max-width:50%;
+    }
+    .home-butorforgalmazas-grid .grid-div {
+      max-width:50%;
+      height:450px;
     }
     .footer-logo, .copy, .social {
       max-width:100%;

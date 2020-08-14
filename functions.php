@@ -6,8 +6,12 @@ function load_scripts() {
 
     wp_register_style('slick',get_template_directory_uri() . '/dist/slick/slick.css', [], 1,'all');
     wp_enqueue_style('slick');
+
     wp_register_style('slick-theme',get_template_directory_uri() . '/dist/slick/slick-theme.css', [], 1,'all');
     wp_enqueue_style('slick-theme');
+
+    wp_register_style('uniformimages-css',get_template_directory_uri() . '/dist/uniformimages/uniformimages.min.css', [], 1,'all');
+    wp_enqueue_style('uniformimages-css');
 
     wp_register_style('style',get_template_directory_uri() . '/dist/app.css', [], 1,'all');
     wp_enqueue_style('style');
@@ -19,6 +23,9 @@ function load_scripts() {
 
     wp_register_script('slick', get_template_directory_uri() . '/dist/slick/slick.js', ['jquery'], 1, true);
     wp_enqueue_script('slick');
+
+    wp_register_script('uniformimages-js', get_template_directory_uri() . '/dist/uniformimages/uniformimages.min.js', ['jquery'], 1, true);
+    wp_enqueue_script('uniformimages-js');
 
     wp_register_script('app', get_template_directory_uri() . '/dist/app.js', ['jquery'], 1, true);
     wp_enqueue_script('app');
@@ -600,11 +607,12 @@ function home_termekslider($attr)  {
   ?>
 
 <?php if(!$xhr):?>
-<div class="home-butorforgalmazas-slider-container">
+<div class="home-butorforgalmazas-grid-container">
+<div class="grid-pager"></div>
 <span class="no-results"><?php echo __('Nincs a szűrésnek megfelelő elem!');?></span>
 <span class="pagingInfo"></span>
 <span class="ajax-load"></span>
-<div class="home-butorforgalmazas-slider"> 
+<div class="home-butorforgalmazas-grid">
 <?php endif;?>
 
 <?php
@@ -613,54 +621,72 @@ function home_termekslider($attr)  {
 
   $div_count = 0;
 
+  $count = 0;
+
+  $page = 1;
+
+  $start = 0;
+
+  $page_size = 5;
+
+  ?>
+
+  <div id="grid_page_<?php echo $page?>" class="grid-page" style="display:block;">
+
+  <?php
+
   while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
     <?php if(check_filter(get_the_ID(),$filters) == true):?>
 
-      <div class="slide-div">                        
-          <div class="slide-div-block">
-          <?php
-            
-            if (has_post_thumbnail( get_the_ID() ) ):
-              $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'single-post-thumbnail' );
-              ?><img src="<?php echo $image[0];?>" /><?php
-            endif;
+      <?php if($count > $page_size):?>
+        <?php
+          $count = 0;
+          $page++;
+        ?>
+        </div>
+        <div id="grid_page_<?php echo $page?>" class="grid-page">
+      <?php else: ?>
+        <?php $count++;?>
+      <?php endif;?>
 
-          ?>
-
+      <div class="grid-div">                        
+          <div class="grid-div-block">
           <?php
-              ?><h2><a href="<?php echo get_permalink();?>"><?php
-              the_title();
-              ?></h2></a><?php
-              foreach($filters as $key => $filter) {
-                //var_export(get_field($key));
-              }
-              ?><div class="excerpt-div"><?php
-              if(has_excerpt()){
-                the_excerpt();
-              } else {
-                echo "<p>&nbsp;</p>";
-              }
-              ?></div><!-- end excerpt-div-->
-              <a class="gld_link" target="_BLANK" href="<?php echo  get_field('gld_file');?>" ><?php echo __('GLD fájl letöltése >>');?></a>
-              <a class="email_link" href="mailto:butorforgalmazas@arterior.hu">butorforgalmazas@arterior.hu</a>
-              <?php
-              /*echo "<pre>";var_export($fields);echo "<br />";var_export(get_field_objects());echo "</pre>";*/
-              $div_count++;
+          if (has_post_thumbnail( get_the_ID() ) ):
+            $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'single-post-thumbnail' );
+          else:
+            $image[0] = get_template_directory_uri() . '/images/no-image.jpg';
+          endif;
           ?>
+          <div class="img-container">
+            <img class="unim" src="<?php echo $image[0];?>" />
           </div>
-      </div><!-- end slide-div -->
+          <?php //endif;?>
+          <h2>
+            <?php the_title();?>
+          </h2>
+          <p><?php the_excerpt();?></p>
+          </div><!-- end grid-div-block -->
+      </div><!-- end grid-div -->
+      
+    <?php //endif;?>
+
+      <?php $div_count++; ?>
 
     <?php endif;?>
 
   <?php endwhile; ?>
-
+  </div><!-- end grid page -->
+  
 <?php if(!$xhr):?>
-
-</div>
-</div><!-- end .home-butorforgalmazas-slider-container -->
+</div><!-- end home-butorforgalmazas-grid -->
+</div><!-- end .home-butorforgalmazas-grid-container -->
+<script>
+  jQuery('.grid-pager').html('<?php echo grid_pager($page);?>');
+</script>
 <?php endif;?>
-
+<!--<div class="grid-pager"><?php //echo grid_pager(0,$div_count);?></div>-->
 <?php
 
   $content = ob_get_contents();
@@ -678,10 +704,14 @@ function home_termekslider($attr)  {
     return $return;
   } else {
 
+    $pager_links = grid_pager($page);
+
     $return = array(
       'filters_content' => $filters_content,
       'content' => $content,
-      'test' => 0
+      'test' => 0,
+      'count' => $div_count,
+      'pager_links' => $pager_links
     );
 
     return $return;
@@ -692,6 +722,32 @@ function home_termekslider($attr)  {
 }
 
 add_shortcode('home_termekslider', 'home_termekslider');
+
+
+function grid_pager($pages = NULL,$xhr = false) {
+
+  if($pages < 2) {
+    return "<span></span>";
+  }
+
+  $return = "<span>";
+
+  for($i = 1;$i <= $pages;$i++) {
+
+    if(!$xhr && $i == 1) {
+      $act_page = ' act';
+    } else {
+      $act_page = '';
+    }
+
+    $return .= '&nbsp;<a href="#" id="grid_pager_link_' . $i. '" class="grid-pager-link' . $act_page . '" data-page="'.$i.'">'.$i.'</a>&nbsp;';
+  }
+
+  $return .= "</span>";
+
+  return $return;
+
+}
 
 function check_filter($post_id = NULL, $filters = NULL) {
 
@@ -1079,3 +1135,22 @@ function need_slider($post_id = NULL) {
   return $ret;
 
 }
+
+function home_termekgrid() {
+
+  ob_start();
+  ?>
+  <div class="termekgrid-container">
+  <?php
+  echo "New butorforgalmazas";
+
+  $content = ob_get_contents();
+  ?>
+  </div>
+  <?php
+  ob_end_clean();
+
+  return $content;
+}
+
+add_shortcode('home_termekgrid','home_termekgrid');

@@ -10648,7 +10648,7 @@ body .mobile-menu-container .mobile-menu-class {
   /*max-width:75%;*/
   height: auto;
   display: block;
-  padding-left: 3rem;
+  padding: 0 2rem;
 }
 
 .filter-container .filter-container-left {
@@ -11325,6 +11325,108 @@ body .mobile-menu-container .mobile-menu-class {
   height: unset;
 }
 
+.home-butorforgalmazas-grid-container {
+  position: relative;
+  padding: 2rem;
+  margin: 0;
+  width: 100%;
+  height: auto;
+  float: left;
+}
+
+.home-butorforgalmazas-grid-container .no-results {
+  /*position:absolute;
+  z-index:999999;*/
+  position: relative;
+  top: 50%;
+  width: 100%;
+  height: auto;
+  color: #ffffff;
+  display: none;
+  text-align: center;
+}
+
+.home-butorforgalmazas-grid-container .ajax-load {
+  position: absolute;
+  background: url("../images/ajax-loader.gif") center center no-repeat;
+  z-index: 999999;
+  top: 50%;
+  left: 50%;
+  width: 54px;
+  height: 54px;
+  display: block;
+}
+
+.home-butorforgalmazas-grid {
+  position: relative;
+  padding: 0;
+  margin: 0 auto;
+  width: auto;
+  height: auto;
+}
+
+.home-butorforgalmazas-grid .grid-div {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 600px;
+  max-width: 33.33%;
+  margin: 0;
+  padding: 0 1rem;
+  float: left;
+}
+
+.home-butorforgalmazas-grid .grid-div .grid-div-block {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.home-butorforgalmazas-grid .grid-div .grid-div-block .img-container img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  z-index: 0;
+}
+
+.home-butorforgalmazas-grid .grid-div .grid-div-block h2 {
+  padding-top: 2rem;
+}
+
+.home-butorforgalmazas-grid-container .grid-pager {
+  position: relative;
+  width: 100%;
+  height: auto;
+  clear: both;
+  display: inline-block;
+}
+
+.home-butorforgalmazas-grid-container .grid-pager span {
+  float: right;
+}
+
+.grid-pager .grid-pager-link {
+  font-size: 1rem;
+  font-weight: normal;
+}
+.grid-pager .grid-pager-link.act {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.home-butorforgalmazas-grid .grid-page {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: auto;
+  display: none;
+}
+
 pre {
   color: red;
 }
@@ -11705,6 +11807,10 @@ section h1, section p {
     max-width: 100% !important;
   }
 
+  .home-butorforgalmazas-grid .grid-div {
+    max-width: 100% !important;
+  }
+
   .home-section .textwidget {
     margin: 1rem;
   }
@@ -11763,6 +11869,11 @@ section h1, section p {
   .egyedibutor-container .egyedibutor-container-elem,
 .referencia-grid-container .referencia-grid-container-elem {
     max-width: 50%;
+  }
+
+  .home-butorforgalmazas-grid .grid-div {
+    max-width: 50%;
+    height: 450px;
   }
 
   .footer-logo, .copy, .social {
