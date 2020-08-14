@@ -24,15 +24,16 @@
 
 .home-section h1, .home-section p {
     width:100%;
-    max-width:1024px;
+    /*max-width:1024px;*/
     margin:0 auto;
+    padding:0 2rem;
 }
 .home-section h1 {
     padding:1.5rem 0rem 3rem 0rem;
 }
 
 .home-section p {
-    padding: 0rem 0rem 0.5rem 0rem;
+    /*padding: 0rem 0rem 0.5rem 0rem;*/
 }
 
 .widget_sow-post-carousel {
@@ -903,6 +904,10 @@
     //float:left;
 }
 
+.grid-div-block a {
+    color:#ffffff !important;
+}
+
 .home-butorforgalmazas-grid .grid-div .grid-div-block .img-container img {
     position:relative;
     width:100%;
@@ -931,6 +936,7 @@
 .grid-pager .grid-pager-link {
     font-size:1rem;
     font-weight:normal;
+    color:#ffffff !important;
     &.act {
         font-size:1.5rem;
         font-weight:bold;
@@ -944,6 +950,74 @@
     width:auto;
     height:auto;
     display:none;
+}
+
+.elemkonyvtar-link-container {
+    position:relative;
+    width:auto;
+    height:auto;
+    text-align:center;
+    max-width:250px;
+    margin:0 auto;
+    padding:0;
+}
+
+.elemkonyvtar-link-container a {
+    padding-left:25px;
+    background:url('../images/elemkonyvtar-link-bg.png') left center no-repeat;
+    position:relative;
+    width:auto;
+    height:auto;
+    float:left;
+    padding-right:10px;
+}
+
+.elemkonyvtar-link-container .info-button {
+    position:relative;
+    width:20px;
+    height:20px;
+    display:block;
+    background:url('../images/info-button-bg.png') center center no-repeat;
+    float:left;
+    cursor:pointer;
+    &.light {
+        background:url('../images/info-button-white-bg.png') center center no-repeat;
+    }
+}
+
+.elemkonyvtar-link-container .info-button-container {
+    display:none;
+    width:450px;
+    height:auto;
+    padding:1rem;
+    background-color:rgba(255,255,255,0.9);
+    border:1px solid #000000;
+    position:absolute;
+    z-index:9999;
+    text-align:left;
+    -webkit-border-radius: 10px;
+    -webkit-border-bottom-right-radius: 0;
+    -moz-border-radius: 10px;
+    -moz-border-radius-bottomright: 0;
+    border-radius: 10px;
+    border-bottom-right-radius: 0;
+    color:#000000;
+}
+
+.info-button-container ul li {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+.simple_email_link {
+    padding-left:25px;
+    background:url('../images/email_link_black.png') left center no-repeat;
+    text-decoration:none;
+    width:250px;
+    &.light {
+        color:#ffffff !important;
+        background:url('../images/email_link.png') left center no-repeat;
+    }
 }
 
 pre {

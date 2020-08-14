@@ -317,7 +317,8 @@ $(document).ready(function(){
                   Height = Height_init;
                 }
 
-                if($('.home-butorforgalmazas-grid').height() == 0) {
+                //if($('.home-butorforgalmazas-grid').height() == 0) {
+                if(results.count == 0){
                   $('.home-butorforgalmazas-grid-container .no-results').show();
                 } else {
                   $('.home-butorforgalmazas-grid-container .no-results').hide();
@@ -393,7 +394,8 @@ $(document).ready(function(){
                   $('.grid-div').css('float','none');
                 }*/
 
-                if($('.home-butorforgalmazas-grid').height() == 0) {
+                //if($('.home-butorforgalmazas-grid').height() == 0) {
+                if(results.count == 0) {
                   $('.home-butorforgalmazas-grid-container .no-results').show();
                 } else {
                   $('.home-butorforgalmazas-grid-container .no-results').hide();
@@ -529,7 +531,8 @@ $(document).ready(function(){
                 }*/
 
                 //console.log($('.home-butorforgalmazas-slider').height());
-                if($('.home-butorforgalmazas-grid').height() == 0) {
+                //if($('.home-butorforgalmazas-grid').height() == 0) {
+                if(results.count == 0) {
                   $('.home-butorforgalmazas-grid-container .no-results').show();
                 } else {
                   $('.home-butorforgalmazas-grid-container .no-results').hide();
@@ -655,15 +658,32 @@ $(document).ready(function(){
 
     var page = $(this).data('page');
 
-    $('.grid-page').hide();
+    $('.grid-page').hide('slow');
 
-    $('#grid_page_'+page).show();
+    $('#grid_page_'+page).show('slow');
 
     $('.grid-pager a').removeClass('act');
 
     $('#grid_pager_link_'+page).addClass('act');
 
     return false;
+  });
+
+  $('.info-button').live('click',function(e){
+    var position = $(this).position();
+
+    var width = $('.info-button-container').width()+25;
+
+    console.log(e.pageX + " " + e.pageY);
+
+    $('.info-button-container').css('bottom',position.top+5);
+    $('.info-button-container').css('left',position.left-width);
+
+    if($('.info-button-container').is(':visible')) {
+      $('.info-button-container').hide('fast');
+    } else {
+      $('.info-button-container').show('fast');
+    }
   });
 
   var $loading = $('.ajax-load').hide();

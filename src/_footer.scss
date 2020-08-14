@@ -3,6 +3,9 @@ footer {
     background-size:cover;
     color:#fff;
     overflow:hidden;
+    position:relative;
+    height:auto;
+    width:100%;
 }
 
 /*.belsoepiteszet {
@@ -39,7 +42,7 @@ footer .info-container .cell {
 }
 
 .footer-logo {
-    max-width:20%;
+    max-width:33.33%;
 }
 
 .footer-logo a {
@@ -50,19 +53,19 @@ footer .info-container .cell {
 }
 
 .social {
-    max-width:25%;
+    max-width:33.33%;
 }
 
 .copy {
     height:auto;
     min-height:50px;
     vertical-align:middle;
-    max-width:55%;
+    max-width:33.33%;
 }
 
 .copy p{
     margin-top:20px;
-    font-size:10px;
+    font-size:0.8rem;
 }
 
 .social a {

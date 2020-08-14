@@ -48,7 +48,7 @@ if(function_exists('arterior_user_popup')) {
                     <a href="<?php echo home_url();?>">
                         <?php //if(get_post_type() == "page"):?>
                         <?php if(need_slider(get_the_ID()) == "page"):?>
-                        <img src="<?php echo get_template_directory_uri();?>/images/arterior-logo-footer.png" />
+                        <img src="<?php echo get_template_directory_uri();?>/images/arterior-logo-footer-new.png" />
                         <?php else:?>
                             <img src="<?php echo get_template_directory_uri();?>/images/arterior-logo-footer-black.png" />
                         <?php endif;?>

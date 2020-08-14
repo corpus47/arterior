@@ -95,8 +95,8 @@ function home_refslider() {
         <?php
             echo the_content();
         ?>
-        <a class="gld_link" target="_BLANK" href="<?php echo  get_field('gld_file');?>" ><?php echo __('GLD fájl letöltése >>');?></a>
-        <a class="email_link" href="mailto:butorforgalmazas@arterior.hu">butorforgalmazas@arterior.hu</a>
+        <!--<a class="gld_link" target="_BLANK" href="<?php //echo  get_field('gld_file');?>" ><?php //echo __('GLD fájl letöltése >>');?></a>
+        <a class="email_link" href="mailto:butorforgalmazas@arterior.hu">butorforgalmazas@arterior.hu</a>-->
       </div>
     </div><!-- end-slide-div -->
 
@@ -664,7 +664,7 @@ function home_termekslider($attr)  {
           </div>
           <?php //endif;?>
           <h2>
-            <?php the_title();?>
+            <a href="<?php echo get_permalink();?>"><?php the_title();?></a>
           </h2>
           <p><?php the_excerpt();?></p>
           </div><!-- end grid-div-block -->
@@ -740,7 +740,7 @@ function grid_pager($pages = NULL,$xhr = false) {
       $act_page = '';
     }
 
-    $return .= '&nbsp;<a href="#" id="grid_pager_link_' . $i. '" class="grid-pager-link' . $act_page . '" data-page="'.$i.'">'.$i.'</a>&nbsp;';
+    $return .= '&nbsp;<a href="javascript:void(0);" id="grid_pager_link_' . $i. '" class="grid-pager-link' . $act_page . '" data-page="'.$i.'">'.$i.'</a>&nbsp;';
   }
 
   $return .= "</span>";
@@ -1154,3 +1154,52 @@ function home_termekgrid() {
 }
 
 add_shortcode('home_termekgrid','home_termekgrid');
+
+function elemkonyvtar_link($attr = [], $content = NULL, $tag = '') {
+
+  $args = shortcode_atts( array(
+
+    'szin' => '288bbf',
+    'link' => 'javascript:void(0);',
+    'szoveg' => '',
+    'light' => false
+
+  ), $attr );
+
+  $color = $args['szin'];
+
+  $link = $args['link'];
+
+  $szoveg = $args['szoveg'];
+
+  $light = $args['light'];
+
+  if(!$light) {
+    $light_style = "";
+  } else {
+    $light_style = " light";
+  }
+
+  ob_start();
+
+  ?>
+  <div class="elemkonyvtar-link-container">
+    <a href="<?php echo $link;?>" style="color:#<?php echo $color;?>"><?php echo $szoveg;?></a>
+    <span class="info-button<?php echo $light_style;?>"></span>
+    <div class="info-button-container">
+      <?php
+            echo $content;
+      ?>
+    </div>
+  </div>
+  <?php
+
+  $content = ob_get_contents();
+
+  ob_end_clean();
+
+  return $content;
+
+}
+
+add_shortcode('elemkonyvtar_link','elemkonyvtar_link');
