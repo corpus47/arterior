@@ -11550,15 +11550,15 @@ var _require = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jqu
 
     $('.referenciak-more').live('click', function () {
       if ($('.morebutton-clear').is(':visible')) {
-        $('.morebutton-clear').hide('slow');
+        $('.morebutton-clear').hide();
       } else {
-        $('.morebutton-clear').show('slow');
+        $('.morebutton-clear').show();
       }
 
       if ($('.referencia-grid-more').is(':visible')) {
         $('.referencia-grid-more').css('display', 'none');
       } else {
-        $('.referencia-grid-more').css('display', 'inline-block');
+        $('.referencia-grid-more').fadeIn().css('display', 'inline-block');
       }
 
       return false;
