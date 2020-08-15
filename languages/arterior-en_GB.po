@@ -1,0 +1,38 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Arterior 1.0\n"
+"POT-Creation-Date: 2020-08-15 17:19+0200\n"
+"PO-Revision-Date: 2020-08-15 17:32+0200\n"
+"Language-Team: WPLabor\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.1\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: kategória\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Last-Translator: \n"
+"Language: en_GB\n"
+"X-Poedit-SearchPath-0: .\n"
+
+msgid "kategória"
+msgstr "category"
+
+msgid "Nincs a szűrésnek megfelelő elem!"
+msgstr "There are no items matching the filter!"
+
+msgid "Csatolt kép"
+msgstr "Attached image"
+
+msgid "MÉG TÖBB"
+msgstr "MORE"
+
+msgid "Tovább"
+msgstr "Next"
+
+msgid "Nincs a keresésnek megfelelő tartalom!"
+msgstr "No content matching your search!"
+
+msgid "A keresés eredménye erre:"
+msgstr "Search results for this"
