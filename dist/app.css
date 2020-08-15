@@ -10658,7 +10658,7 @@ body .mobile-menu-container .mobile-menu-class {
   /*max-width:75%;*/
   height: auto;
   display: block;
-  padding: 0 2rem;
+  padding: 0 2.5rem;
 }
 
 .filter-container .filter-container-left {
@@ -11425,6 +11425,10 @@ body .mobile-menu-container .mobile-menu-class {
   height: auto;
   clear: both;
   display: inline-block;
+}
+
+.grid-pager a {
+  padding: 0 0.5rem;
 }
 
 .home-butorforgalmazas-grid-container .grid-pager span {
