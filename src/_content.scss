@@ -54,7 +54,7 @@
     width:100%;
     height:auto;
     display:inline-block;
-    padding:0 5rem;
+    padding:0 2rem;
     margin-bottom:1.5rem;
 }
 
@@ -432,7 +432,7 @@
     float:left;
     display:inline-block;
     margin:0 auto;
-    padding:0 1.5rem;
+    padding:0 2.5rem;
     width:100%;
     height:auto;
 }
@@ -906,6 +906,10 @@
 
 .grid-div-block a {
     color:#ffffff !important;
+}
+
+.grid-div-block p {
+    padding:0;
 }
 
 .home-butorforgalmazas-grid .grid-div .grid-div-block .img-container img {

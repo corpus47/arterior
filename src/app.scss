@@ -270,6 +270,21 @@ section h1, section p {
   .right-container {
     padding-right:10px !important;
   }
+  .top-container-left {
+    max-width:100% !important;
+  }
+  .top-container-right {
+    max-width:100% !important;
+    padding-top:2rem !important;
+  }
+  .top-container-right .social {
+    float:none;
+  }
+  .top-container-left .footer-menu-container li a {
+    padding:1rem 0;
+    text-align:center;
+    max-width:100%;
+  }
 }
 
 @media (max-width:600px) {
@@ -300,15 +315,15 @@ section h1, section p {
 }
 
 @media (max-width:960px) {
-    .navbar {
+    /*.navbar {
       display:none;
     }
     .hambi-menu {
       display:block;
-    }
+    }*/
     .slider-container .slide-div h1 {
       font-size:1.5rem !important;
-      top:30% !important;
+      top:40% !important;
     }
     .slider-container .slide-div h1 p {
       padding:0 20px;
@@ -336,10 +351,29 @@ section h1, section p {
       max-width:50%;
       height:450px;
     }
+    .cell {
+      padding-right:0rem !important;
+    }
     .footer-logo, .copy, .social {
       max-width:100%;
     }
+    .footer-logo a {
+      float:none;
+    }
+    .placeholder-left {
+      max-width:100%;
+      height:1px !important;
+    }
     
+}
+
+@media (max-width:1200px) {
+  .navbar {
+    display:none;
+  }
+  .hambi-menu {
+    display:block;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -361,23 +395,23 @@ section h1, section p {
     .navbar {
       //float:right;
     }
-    .right-container .search_bar {
+    /*.right-container .search_bar {
       display:none;
-    }
+    }*/
     .slider-container .slide-div h1 {
       font-size:2rem;
     }
-    .mobile-search {
+    /*.mobile-search {
       display:block;
-    }
+    }*/
     /*.mobile-search-container {
       display:flex;
     }*/
-    .header-container .right-container {
+    /*.header-container .right-container {
       //float:left;
       min-width:unset;
       padding-right:57px;
-    }
+    }*/
     .filter-container-left {
       max-width:unset !important;
     }
@@ -396,12 +430,23 @@ section h1, section p {
 
 
 @media (max-width:1380px) {
-  .header-container {
+  .right-container .search_bar {
+    display:none;
+  }
+  .mobile-search {
+    display:block;
+  }
+  .header-container .right-container {
+    //float:left;
+    min-width:unset;
+    padding-right:30px;
+  }
+  /*.header-container {
     max-width:1380px;
-  }
-  .navbar {
+  }*/
+  /*.navbar {
     max-width:700px !important;
-  }
+  }*/
   
   .home-referencia-slider .slide-div img,
   .home-butorforgalmazas-slider .slide-div img {

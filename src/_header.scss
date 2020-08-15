@@ -12,7 +12,7 @@ header {
     max-width:1920px;
     margin:0;
     padding:0;
-    height:auto;
+    height:58px;
     z-index:99999;
     position:absolute;
     /*overflow:hidden;*/
@@ -24,12 +24,26 @@ header {
     float:left;
     width:100%;
     max-width:225px;
-    height:auto;
+    height:100%;
     display:block;
     text-align:left;
     padding-left:57px;
     margin-right:1.5rem;
+    padding-top:10px;
 }
+
+.header-container .logo a {
+    position:relative;
+    width:100%;
+    height:auto;
+    display:block;
+    margin:auto 0;
+}
+
+.header-container .logo img {
+    
+}
+
 .navbar-light .navbar-nav .nav-link {
     color:#ffffff;
     text-transform:uppercase;
@@ -185,7 +199,7 @@ header {
 .header-container .right-container {
     position:relative;
     width:auto;
-    min-width:410px;
+    min-width:385px;
     height:auto;
     margin:0;
     padding:0;

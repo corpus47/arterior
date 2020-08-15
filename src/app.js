@@ -686,6 +686,8 @@ $(document).ready(function(){
     }
   });
 
+  /*$('.footer-menu-container ul li:nth-child(3n)').after('<div class="break-foot-menu"></div>');*/
+
   var $loading = $('.ajax-load').hide();
   
   $(document)

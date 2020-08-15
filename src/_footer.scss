@@ -25,10 +25,13 @@ footer {
 
 footer .info-container {
     position:relative;
-    padding:75px 0;
+    padding:2rem 0;
+    margin-top:2rem;
     display:block;
     width:100%;
     height:auto;
+    border-top:1px solid #ffffff;
+    float:left;
 }
 
 footer .info-container .cell {
@@ -37,6 +40,7 @@ footer .info-container .cell {
     float:left;
     margin:0;
     padding:0;
+    padding-right:4rem;
     text-align:center;
     height:auto;
 }
@@ -47,13 +51,23 @@ footer .info-container .cell {
 
 .footer-logo a {
     position:relative;
-    display:inline-block;
+    display:block;
     width:auto;
     height:auto;
+    float:right;
 }
 
-.social {
+.placeholder-left {
     max-width:33.33%;
+}
+
+.top-container-right .social {
+    width:100%;
+    margin:0 auto;
+    display:block;
+    height:auto;
+    float:right;
+    max-width:250px;
 }
 
 .copy {
@@ -86,25 +100,55 @@ footer .info-container .cell {
     background:url('../images/youtube.png') no-repeat center;
 }
 
-.footer-menu-container {
-    text-align:center;
-    margin-top:75px;
+footer .top-container {
+    position:relative;
+    margin:0;
+    padding:2rem 57px;
+    width:100%;
+    height:auto;
+    display:inline-block;
 }
 
-.footer-menu-container li a {
+.top-container .top-container-left {
+    max-width:50%;
+    position:relative;
+    margin:0;
+    padding:0;
+    width:100%;
+    height:auto;
+    display:inline-block;
+}
+
+.top-container .top-container-right {
+    max-width:49%;
+    position:relative;
+    margin:0;
+    padding:0;
+    width:100%;
+    height:auto;
+    display:inline-block;
+}
+
+.top-container-left .footer-menu-container {
+    text-align:left;
+    //margin-top:75px;
+}
+
+.top-container-left .footer-menu-container li a {
     padding:0.5rem 0rem;
-    margin:0 auto;
+    margin:0;
     display:block;
-    border:1px solid transparent;width:100%;
+    border:1px solid transparent;
+    width:100%;
     max-width:360px;
 }
-.footer-menu-container a:link,
-.footer-menu-container a:hover,
-.footer-menu-container a:active,
-.footer-menu-container a:visited {
+.top-container-left .footer-menu-container a:link,
+.top-container-left .footer-menu-container a:hover,
+.top-container-left .footer-menu-container a:active,
+.top-container-left .footer-menu-container a:visited {
     text-decoration:none;
 }
-.footer-menu-container a:hover {
+.top-container-left .footer-menu-container a:hover {
     border:1px solid #ffffff; 
 }
 
@@ -115,4 +159,16 @@ footer .info-container .cell {
     display:inline-block;
     margin:0;
     padding:0;
+}
+
+/*.footer-menu-container ul li {
+    max-width:50%;
+    position:relative;
+    float:left;
+}*/
+
+.break-foot-menu {
+    clear:both;
+    width:100%;
+    height:1px;
 }

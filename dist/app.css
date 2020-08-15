@@ -10022,7 +10022,7 @@ header {
   max-width: 1920px;
   margin: 0;
   padding: 0;
-  height: auto;
+  height: 58px;
   z-index: 99999;
   position: absolute;
   /*overflow:hidden;*/
@@ -10035,11 +10035,20 @@ header {
   float: left;
   width: 100%;
   max-width: 225px;
-  height: auto;
+  height: 100%;
   display: block;
   text-align: left;
   padding-left: 57px;
   margin-right: 1.5rem;
+  padding-top: 10px;
+}
+
+.header-container .logo a {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: auto 0;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -10199,7 +10208,7 @@ header {
 .header-container .right-container {
   position: relative;
   width: auto;
-  min-width: 410px;
+  min-width: 385px;
   height: auto;
   margin: 0;
   padding: 0;
@@ -10546,7 +10555,7 @@ body .mobile-menu-container .mobile-menu-class {
   width: 100%;
   height: auto;
   display: inline-block;
-  padding: 0 5rem;
+  padding: 0 2rem;
   margin-bottom: 1.5rem;
 }
 
@@ -10929,7 +10938,7 @@ body .mobile-menu-container .mobile-menu-class {
   float: left;
   display: inline-block;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 2.5rem;
   width: 100%;
   height: auto;
 }
@@ -11389,6 +11398,10 @@ body .mobile-menu-container .mobile-menu-class {
   color: #ffffff !important;
 }
 
+.grid-div-block p {
+  padding: 0;
+}
+
 .home-butorforgalmazas-grid .grid-div .grid-div-block .img-container img {
   position: relative;
   width: 100%;
@@ -11531,10 +11544,13 @@ footer {
 }*/
 footer .info-container {
   position: relative;
-  padding: 75px 0;
+  padding: 2rem 0;
+  margin-top: 2rem;
   display: block;
   width: 100%;
   height: auto;
+  border-top: 1px solid #ffffff;
+  float: left;
 }
 
 footer .info-container .cell {
@@ -11543,6 +11559,7 @@ footer .info-container .cell {
   float: left;
   margin: 0;
   padding: 0;
+  padding-right: 4rem;
   text-align: center;
   height: auto;
 }
@@ -11553,13 +11570,23 @@ footer .info-container .cell {
 
 .footer-logo a {
   position: relative;
-  display: inline-block;
+  display: block;
   width: auto;
   height: auto;
+  float: right;
 }
 
-.social {
+.placeholder-left {
   max-width: 33.33%;
+}
+
+.top-container-right .social {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  height: auto;
+  float: right;
+  max-width: 250px;
 }
 
 .copy {
@@ -11594,28 +11621,56 @@ footer .info-container .cell {
   background: url("../images/youtube.png") no-repeat center;
 }
 
-.footer-menu-container {
-  text-align: center;
-  margin-top: 75px;
+footer .top-container {
+  position: relative;
+  margin: 0;
+  padding: 2rem 57px;
+  width: 100%;
+  height: auto;
+  display: inline-block;
 }
 
-.footer-menu-container li a {
+.top-container .top-container-left {
+  max-width: 50%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+.top-container .top-container-right {
+  max-width: 49%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+.top-container-left .footer-menu-container {
+  text-align: left;
+}
+
+.top-container-left .footer-menu-container li a {
   padding: 0.5rem 0rem;
-  margin: 0 auto;
+  margin: 0;
   display: block;
   border: 1px solid transparent;
   width: 100%;
   max-width: 360px;
 }
 
-.footer-menu-container a:link,
-.footer-menu-container a:hover,
-.footer-menu-container a:active,
-.footer-menu-container a:visited {
+.top-container-left .footer-menu-container a:link,
+.top-container-left .footer-menu-container a:hover,
+.top-container-left .footer-menu-container a:active,
+.top-container-left .footer-menu-container a:visited {
   text-decoration: none;
 }
 
-.footer-menu-container a:hover {
+.top-container-left .footer-menu-container a:hover {
   border: 1px solid #ffffff;
 }
 
@@ -11626,6 +11681,17 @@ footer .info-container .cell {
   display: inline-block;
   margin: 0;
   padding: 0;
+}
+
+/*.footer-menu-container ul li {
+    max-width:50%;
+    position:relative;
+    float:left;
+}*/
+.break-foot-menu {
+  clear: both;
+  width: 100%;
+  height: 1px;
 }
 
 body {
@@ -11877,6 +11943,25 @@ section h1, section p {
   .right-container {
     padding-right: 10px !important;
   }
+
+  .top-container-left {
+    max-width: 100% !important;
+  }
+
+  .top-container-right {
+    max-width: 100% !important;
+    padding-top: 2rem !important;
+  }
+
+  .top-container-right .social {
+    float: none;
+  }
+
+  .top-container-left .footer-menu-container li a {
+    padding: 1rem 0;
+    text-align: center;
+    max-width: 100%;
+  }
 }
 @media (max-width: 600px) {
   .egyedibutor-container .egyedibutor-container-elem,
@@ -11909,17 +11994,15 @@ section h1, section p {
   }
 }
 @media (max-width: 960px) {
-  .navbar {
-    display: none;
+  /*.navbar {
+    display:none;
   }
-
   .hambi-menu {
-    display: block;
-  }
-
+    display:block;
+  }*/
   .slider-container .slide-div h1 {
     font-size: 1.5rem !important;
-    top: 30% !important;
+    top: 40% !important;
   }
 
   .slider-container .slide-div h1 p {
@@ -11953,8 +12036,30 @@ section h1, section p {
     height: 450px;
   }
 
+  .cell {
+    padding-right: 0rem !important;
+  }
+
   .footer-logo, .copy, .social {
     max-width: 100%;
+  }
+
+  .footer-logo a {
+    float: none;
+  }
+
+  .placeholder-left {
+    max-width: 100%;
+    height: 1px !important;
+  }
+}
+@media (max-width: 1200px) {
+  .navbar {
+    display: none;
+  }
+
+  .hambi-menu {
+    display: block;
   }
 }
 @media (min-width: 1200px) {
@@ -11963,26 +12068,24 @@ section h1, section p {
   }
 }
 @media (max-width: 1260px) {
-  .right-container .search_bar {
-    display: none;
-  }
-
+  /*.right-container .search_bar {
+    display:none;
+  }*/
   .slider-container .slide-div h1 {
     font-size: 2rem;
   }
 
-  .mobile-search {
-    display: block;
-  }
-
+  /*.mobile-search {
+    display:block;
+  }*/
   /*.mobile-search-container {
     display:flex;
   }*/
-  .header-container .right-container {
-    min-width: unset;
-    padding-right: 57px;
-  }
-
+  /*.header-container .right-container {
+    //float:left;
+    min-width:unset;
+    padding-right:57px;
+  }*/
   .filter-container-left {
     max-width: unset !important;
   }
@@ -11999,14 +12102,25 @@ section h1, section p {
   }
 }
 @media (max-width: 1380px) {
-  .header-container {
-    max-width: 1380px;
+  .right-container .search_bar {
+    display: none;
   }
 
-  .navbar {
-    max-width: 700px !important;
+  .mobile-search {
+    display: block;
   }
 
+  .header-container .right-container {
+    min-width: unset;
+    padding-right: 30px;
+  }
+
+  /*.header-container {
+    max-width:1380px;
+  }*/
+  /*.navbar {
+    max-width:700px !important;
+  }*/
   .home-referencia-slider .slide-div img,
 .home-butorforgalmazas-slider .slide-div img {
     /*max-width:320px;*/

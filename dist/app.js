@@ -11546,6 +11546,8 @@ var _require = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jqu
         $('.info-button-container').show('fast');
       }
     });
+    /*$('.footer-menu-container ul li:nth-child(3n)').after('<div class="break-foot-menu"></div>');*/
+
     var $loading = $('.ajax-load').hide();
     $(document).ajaxStart(function () {
       $loading.show();
