@@ -1033,11 +1033,18 @@ function referencia_grid() {
 
   $loop = new WP_Query( array( 'post_type' => 'referencia', 'posts_per_page' => 10 ) );
 
+  $i = 0;
+
+  $more_i = 1;
+
   while ( $loop->have_posts() ) : $loop->the_post();
 
   ?>
 
   <!--<div class="referencia-grid-container">-->
+  
+  <?php if($i <= 5 ):?>
+
   <div class="referencia-grid-container-elem">
     
   <?php
@@ -1050,13 +1057,31 @@ function referencia_grid() {
         <p><?php the_excerpt();?></p>
       </div>
     </a>
-    <img src="<?php echo $image[0];?>" />
+    <img class="" src="<?php echo $image[0];?>" />
   </div>
   <?php
+  $i++;
   ?>
 
   </div><!-- end referencia grid container elem -->
 <!--</div>--><!-- end referencia-grid-container -->
+
+  <?php else: ?>
+    <?php if($more_i == 1):?>
+      <div class="morebutton-container">
+        <a class="referenciak-more" href="#"><?php echo __("MÉG TÖBB");?></a>
+      </div>
+      <div class="morebutton-clear" ></div>
+      <div class="referencia-grid-more">
+    <?php endif;?>
+    <div class="referencia-grid-more-container">
+      <a href="<?php echo get_permalink();?>" class="referencia-grid-link"><?php the_title();?></a>
+    </div>
+    <?php if($more_i % 2 == 0):?>
+      <div style="clear:both;position:relative;width:100%;height:1px;display:block;"></div>
+    <?php endif;?>
+    <?php $more_i++;?>
+  <?php endif;?>
 
   <?php
 
@@ -1065,9 +1090,12 @@ function referencia_grid() {
   endwhile;
 
   ?>
-  <div class="morebutton-container">
-    <a class="referenciak-more" href="#"><?php echo __("MÉG TÖBB");?></a>
-  </div>
+  <?php if($i > 5):?>
+  </div><!-- end referencia-grid-more -->
+  <?php endif;?>
+  <!--<div class="morebutton-container">
+    <a class="referenciak-more" href="#"><?php //echo __("MÉG TÖBB");?></a>
+  </div>-->
   <?php
 
   $content = ob_get_contents();

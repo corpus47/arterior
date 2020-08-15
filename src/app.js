@@ -688,6 +688,21 @@ $(document).ready(function(){
 
   /*$('.footer-menu-container ul li:nth-child(3n)').after('<div class="break-foot-menu"></div>');*/
 
+  $('.referenciak-more').live('click',function(){
+    
+    if($('.morebutton-clear').is(':visible')) {
+      $('.morebutton-clear').hide('slow');
+    } else {
+      $('.morebutton-clear').show('slow');
+    }
+    if($('.referencia-grid-more').is(':visible')) {
+      $('.referencia-grid-more').css('display','none');
+    } else {
+      $('.referencia-grid-more').css('display','inline-block');
+    }
+    return false;
+  });
+
   var $loading = $('.ajax-load').hide();
   
   $(document)

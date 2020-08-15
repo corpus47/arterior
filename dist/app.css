@@ -11030,7 +11030,7 @@ body .mobile-menu-container .mobile-menu-class {
   height: auto;
   display: block;
   text-align: center;
-  margin: 1rem auto;
+  margin: 1rem auto 0 auto;
 }
 
 .morebutton-container > a {
@@ -11520,6 +11520,34 @@ body .mobile-menu-container .mobile-menu-class {
 
 #epuletfelmeres-block p {
   padding: 0;
+}
+
+.referencia-grid-more {
+  position: relative;
+  display: none;
+  width: 100%;
+  height: auto;
+  border: 1px solid #000000;
+  padding: 2rem;
+}
+
+.referencia-grid-more .referencia-grid-more-container {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 50%;
+  float: left;
+  padding: 0.5rem 0;
+}
+
+.morebutton-clear {
+  clear: both;
+  position: relative;
+  width: 100%;
+  height: 20px;
+  display: none;
+  background: url("../images/morebutton-clear-bg.png") center center no-repeat;
 }
 
 pre {
