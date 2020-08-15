@@ -99,7 +99,16 @@ if(function_exists('arterior_user_popup')) {
                     ?>
                     
                     <a class="user-menu<?php echo $dark_menu;echo $style_logged;?>" href="javascript:void(0);" data-user-logged="<?php echo $logged;?>" ></a>
-                    <a class="langswitch-menu<?php echo $dark_menu;?>" href="#">hu</a>
+                    <div class="langswitch-menu<?php echo $dark_menu;?>">
+                        <ul>
+                            <?php pll_the_languages([
+                                'dropdown' => 0,
+                                'show_names' => 0,
+                                'show_flags' => 1,
+                                'hide_current' => 1,
+                            ]);?>
+                        </ul>
+                    </div>
                     <a class="mobile-search<?php echo $dark_menu;?>" href="javascript:void(0);"></a>
                     <a class="hambi-menu<?php echo $dark_menu;?>" href="javascript:void(0);"></a>
                 </div>

@@ -10498,6 +10498,24 @@ body .mobile-menu-container .mobile-menu-class {
   text-transform: none !important;
 }
 
+.langswitch-menu {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  width: auto;
+}
+
+.langswitch-menu ul {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0.25rem 0;
+  height: auto;
+  width: auto;
+}
+
 .content {
   height: auto;
   width: 100%;
