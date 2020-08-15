@@ -1,5 +1,11 @@
 <?php
 
+function my_theme_load_theme_textdomain() {
+  load_theme_textdomain( 'arterior', get_template_directory() . '/languages' );
+}
+add_action( 'after_setup_theme', 'my_theme_load_theme_textdomain' );
+
+
 //add_filter('use_block_editor_for_post', '__return_false', 10);
 
 function load_scripts() {
@@ -58,9 +64,9 @@ if ( ! file_exists( get_template_directory() . '/class-wp-bootstrap-navwalker.ph
 function wpb_custom_new_menu() {
     register_nav_menus(
       array(
-        'main_menu' => __( 'Főmenü' ),
-        'footer_menu' => __( 'Footer menü' ),
-        'mobile_menu' => __('Mobil menü'),
+        'main_menu' => __( 'Főmenü',"arterior" ),
+        'footer_menu' => __( 'Footer menü',"arterior" ),
+        'mobile_menu' => __('Mobil menü',"arterior"),
       )
     );
   }
@@ -179,7 +185,7 @@ function search_ret_content($search_str = "") {
         foreach($found_search['filter_cat'] as $filter_cat) {
           //var_export($filter_cat);echo " filter cat <br />";
           if(!isset($return_links['filter_cat'][$filter_cat])) {
-            $return_links['filter_cat'][$filter_cat] = '<div class="ret_bar_link" data-typ="category" data-label="'.$filter_cat.'">'.show_bolded($filter_cat,$search_str).' ('.__('kategória').')</div>';
+            $return_links['filter_cat'][$filter_cat] = '<div class="ret_bar_link" data-typ="category" data-label="'.$filter_cat.'">'.show_bolded($filter_cat,$search_str).' ('.__('kategória',"arterior").')</div>';
           }
         }
       }
@@ -609,7 +615,7 @@ function home_termekslider($attr)  {
 <?php if(!$xhr):?>
 <div class="home-butorforgalmazas-grid-container">
 <div class="grid-pager"></div>
-<span class="no-results"><?php echo __('Nincs a szűrésnek megfelelő elem!');?></span>
+<span class="no-results"><?php echo __('Nincs a szűrésnek megfelelő elem!',"arterior");?></span>
 <span class="pagingInfo"></span>
 <span class="ajax-load"></span>
 <div class="home-butorforgalmazas-grid">
@@ -907,7 +913,7 @@ add_filter('manage_pages_columns', 'crunchify_add_post_admin_thumbnail_column', 
  
 // Add the column
 function crunchify_add_post_admin_thumbnail_column($crunchify_columns){
-	$crunchify_columns['crunchify_thumb'] = __('Csatolt kép');
+	$crunchify_columns['crunchify_thumb'] = __('Csatolt kép',"arterior");
 	return $crunchify_columns;
 }
  
@@ -1069,7 +1075,7 @@ function referencia_grid() {
   <?php else: ?>
     <?php if($more_i == 1):?>
       <div class="morebutton-container">
-        <a class="referenciak-more" href="#"><?php echo __("MÉG TÖBB");?></a>
+        <a class="referenciak-more" href="#"><?php echo __("MÉG TÖBB","arterior");?></a>
       </div>
       <div class="morebutton-clear" ></div>
       <div class="referencia-grid-more">

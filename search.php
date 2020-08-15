@@ -9,7 +9,7 @@ get_header();
  
 if ( have_posts() ) :
 	?>
-    <h2><?php echo __('A keresés eredménye erre:');?> "<?php the_search_query(); ?>"</h2>
+    <h2><?php echo __('A keresés eredménye erre:',"arterior");?> "<?php the_search_query(); ?>"</h2>
 	<?php
 	while ( have_posts() ) : the_post(); ?>
  
@@ -37,7 +37,7 @@ if ( have_posts() ) :
             <p>
                 <?php echo get_the_excerpt() ?>
                 <br />
-                <a href="<?php the_permalink() ?>"><?php echo __('Tovább');?> &raquo</a>
+                <a href="<?php the_permalink() ?>"><?php echo __('Tovább',"arterior");?> &raquo</a>
             </p>
         </article>
 	
@@ -46,7 +46,7 @@ if ( have_posts() ) :
     echo paginate_links();
  
 else :
-	echo '<p>'.__('Nincs a keresésnek megfelelő tartalom!').'</p>';
+	echo '<p>'.__('Nincs a keresésnek megfelelő tartalom!',"arterior").'</p>';
  
 endif;
 
