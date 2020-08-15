@@ -45,7 +45,7 @@ function load_scripts() {
 
 add_action('wp_enqueue_scripts','load_scripts');
 
-add_theme_support( 'post-thumbnails',array('page','post','referencia','termekek','egyedi_butorok','gld_files'));
+add_theme_support( 'post-thumbnails',array('page','post','referencia','termekek','egyedi_butorok','gld_files','bim_tervezes'));
 
 if ( ! file_exists( get_template_directory() . '/class-wp-bootstrap-navwalker.php' ) ) {
   // File does not exist... return an error.
@@ -975,7 +975,9 @@ function gdl_slider() {
 
   ob_start();
 
-  $loop = new WP_Query( array( 'post_type' => 'gld_files', 'posts_per_page' => 10 ) );
+  //$loop = new WP_Query( array( 'post_type' => 'gld_files', 'posts_per_page' => 10 ) );
+
+  $loop = new WP_Query( array( 'post_type' => 'bim_tervezes', 'posts_per_page' => 10 ) );
 
   ?>
 
@@ -999,8 +1001,8 @@ function gdl_slider() {
     the_excerpt();
     ?></p><?php
     ?>
-    <a class="gld_link" target="_BLANK" href="<?php echo  get_field('gld_file');?>" ><?php echo __('GLD fájl letöltése >>');?></a>
-    <a class="email_link" href="mailto:butorforgalmazas@arterior.hu">butorforgalmazas@arterior.hu</a>
+    <!--<a class="gld_link" target="_BLANK" href="<?php //echo get_field('gld_file');?>" ><?php //echo __('GLD fájl letöltése >>');?></a>
+    <a class="email_link" href="mailto:butorforgalmazas@arterior.hu">butorforgalmazas@arterior.hu</a>-->
     <?php
     ?></div><?php
 

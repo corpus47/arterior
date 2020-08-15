@@ -585,8 +585,12 @@
     width:100%;
     height:auto;
     display:inline-block;
-    padding:0 5rem;
+    padding:0 2rem;
     margin-bottom:1.5rem;
+}
+
+.bimgo-gdl-slider-container p {
+    padding:1rem 0 0 0;
 }
 
 .bimgo-gdl-slider {
@@ -1022,6 +1026,10 @@
         color:#ffffff !important;
         background:url('../images/email_link.png') left center no-repeat;
     }
+}
+
+#epuletfelmeres-block p {
+    padding:0;
 }
 
 pre {

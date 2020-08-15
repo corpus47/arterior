@@ -11088,8 +11088,12 @@ body .mobile-menu-container .mobile-menu-class {
   width: 100%;
   height: auto;
   display: inline-block;
-  padding: 0 5rem;
+  padding: 0 2rem;
   margin-bottom: 1.5rem;
+}
+
+.bimgo-gdl-slider-container p {
+  padding: 1rem 0 0 0;
 }
 
 .bimgo-gdl-slider {
@@ -11512,6 +11516,10 @@ body .mobile-menu-container .mobile-menu-class {
 .simple_email_link.light {
   color: #ffffff !important;
   background: url("../images/email_link.png") left center no-repeat;
+}
+
+#epuletfelmeres-block p {
+  padding: 0;
 }
 
 pre {
@@ -11991,6 +11999,10 @@ section h1, section p {
 
   .so-panel .home-refslider-container {
     padding: 0 1rem;
+  }
+
+  .bimgo-gdl-slider-container {
+    padding: 0 2rem;
   }
 }
 @media (max-width: 960px) {
