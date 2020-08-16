@@ -11569,9 +11569,9 @@ var _require = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jqu
       var img_src = $('.langswitch-menu img').attr('src'); //console.log(img_src);
 
       if (object_name.lang == "hu") {
-        $('.langswitch-menu img').attr('src', object_name.templateUrl + '/polylang/hu_HU-dark.png');
-      } else {
         $('.langswitch-menu img').attr('src', object_name.templateUrl + '/polylang/en_GB-dark.png');
+      } else {
+        $('.langswitch-menu img').attr('src', object_name.templateUrl + '/polylang/hu_HU-dark.png');
       }
     }
 

@@ -7,7 +7,7 @@
 
         $slider_images = single_slider_images($post->ID);
     ?>
-    <h1><?php the_title();?></h1>
+    <h1><strong><?php the_title();?></strong></h1>
     <div class="single-slider-container">
         <?php
             if(is_array($slider_images)):
