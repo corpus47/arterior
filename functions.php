@@ -44,6 +44,8 @@ function load_scripts() {
       $translation_array['front_page']= 0;
       $translation_array['site_url']= get_site_url();
     }
+
+    $translation_array['lang'] = get_bloginfo('language');
     //after wp_enqueue_script
     wp_localize_script( 'app', 'object_name', $translation_array );
 
