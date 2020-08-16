@@ -129,10 +129,13 @@ $(document).ready(function(){
 
     $('.dropdown').hover(function(){
         $(this).find('.dropdown-menu').addClass('show');
-        if(object_name.front_page == 1) {
+        //console.log($('nav').hasClass('dark'));
+        //if(object_name.front_page == 1) {
+        if($('nav').hasClass('dark') == false){
           $(this).find(".nav-link").css("border","1px solid #ffffff");
         } else {
-          $(this).find(".nav-link").css("border","1px solid #000000");  
+          $(this).find(".nav-link").css("border","1px solid #000000");
+          //$(this).find(".nav-link").css("border","1px solid #ffffff");  
         }
     });
     

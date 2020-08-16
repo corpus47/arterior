@@ -11085,12 +11085,13 @@ var _require = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jqu
       $(this).find('.slick-counter').html(slick.currentSlide + 1);
     });
     $('.dropdown').hover(function () {
-      $(this).find('.dropdown-menu').addClass('show');
+      $(this).find('.dropdown-menu').addClass('show'); //console.log($('nav').hasClass('dark'));
+      //if(object_name.front_page == 1) {
 
-      if (object_name.front_page == 1) {
+      if ($('nav').hasClass('dark') == false) {
         $(this).find(".nav-link").css("border", "1px solid #ffffff");
       } else {
-        $(this).find(".nav-link").css("border", "1px solid #000000");
+        $(this).find(".nav-link").css("border", "1px solid #000000"); //$(this).find(".nav-link").css("border","1px solid #ffffff");  
       }
     });
     $('.dropdown-menu').mouseleave(function () {
