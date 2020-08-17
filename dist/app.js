@@ -10995,10 +10995,10 @@ var _require = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jqu
       });
       /*$('.contact-menu').each(function(){
         var currentHref = $(this).attr('href');
-          var newHref = object_name.site_url + currentHref;
-          console.log(newHref);
-          $(this).attr('href', newHref);
-        });*/
+         var newHref = object_name.site_url + currentHref;
+         console.log(newHref);
+         $(this).attr('href', newHref);
+       });*/
     }
 
     var speed = 1000;
@@ -11120,22 +11120,20 @@ var _require = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jqu
       var href = $(this).attr('href');
       
       //var target = href.substr(1,href.length);
-        var target = href.substr(href.search('#')+1,href.length)
-        var current_url = href.substr(0,href.search('#')-1);
-        //console.log($('[id=' + target + ']').offset());
-    
-      event.preventDefault();
-        console.log(event);
-        $('html, body').animate ({ scrollTop: $('[id=' + target + ']').offset().top}, 'slow');
+       var target = href.substr(href.search('#')+1,href.length)
+       var current_url = href.substr(0,href.search('#')-1);
+       //console.log($('[id=' + target + ']').offset());
+          event.preventDefault();
+       console.log(event);
+       $('html, body').animate ({ scrollTop: $('[id=' + target + ']').offset().top}, 'slow');
       //$('.dropdown').removeClass('open');
-        if( $(".dropdown-menu").hasClass("show")) {
+       if( $(".dropdown-menu").hasClass("show")) {
         setTimeout(function(){///workaround
             $(".dropdown-menu").removeClass("show");
             $(".dropdown").find(".nav-link").css("border","1px solid transparent");
         }, 10);
       }
-    
-      return false;
+          return false;
     });*/
 
     $('.scroll-to-top').click(function (event) {
@@ -11165,7 +11163,7 @@ var _require = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jqu
         url:"/wp-admin/admin-ajax.php",
       type:'POST',
       data:'action=arterior_ajax_action&filters='+$('[name=filters]').val(),
-      			 success:function(results)
+      		 success:function(results)
       		 {
                   alert(results);
                  }
@@ -11604,8 +11602,8 @@ var _require = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jqu
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\dev\arterior\wp-content\themes\arterior\src\app.js */"./src/app.js");
-module.exports = __webpack_require__(/*! C:\dev\arterior\wp-content\themes\arterior\src\app.scss */"./src/app.scss");
+__webpack_require__(/*! /home/apuci/dev/arterior/wp-content/themes/arterior/src/app.js */"./src/app.js");
+module.exports = __webpack_require__(/*! /home/apuci/dev/arterior/wp-content/themes/arterior/src/app.scss */"./src/app.scss");
 
 
 /***/ })

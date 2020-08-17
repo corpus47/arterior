@@ -11719,6 +11719,7 @@ footer .top-container {
   border: 1px solid transparent;
   width: 100%;
   max-width: 360px;
+  cursor: pointer;
 }
 
 .top-container-left .footer-menu-container a:link,
@@ -11729,7 +11730,8 @@ footer .top-container {
 }
 
 .top-container-left .footer-menu-container a:hover {
-  border: 1px solid #ffffff;
+  /*border:1px solid #ffffff;*/
+  text-decoration: underline;
 }
 
 .kapcsolat-section {
