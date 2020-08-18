@@ -10519,7 +10519,7 @@ body .mobile-menu-container .mobile-menu-class {
 @-webkit-keyframes fadeInUpSD {
   0% {
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(200px);
   }
   100% {
     opacity: 1;
@@ -10529,7 +10529,7 @@ body .mobile-menu-container .mobile-menu-class {
 @keyframes fadeInUpSD {
   0% {
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(200px);
   }
   100% {
     opacity: 1;
@@ -10548,7 +10548,7 @@ body .mobile-menu-container .mobile-menu-class {
           animation-duration: 1s;
   opacity: 1;
   width: 100%;
-  padding: 10px 20px 30px 0;
+  /*padding: 10px 20px 30px 0;*/
 }
 
 .content {
