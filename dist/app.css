@@ -10516,6 +10516,41 @@ body .mobile-menu-container .mobile-menu-class {
   width: auto;
 }
 
+@-webkit-keyframes fadeInUpSD {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fadeInUpSD {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.fadeInUpSD {
+  -webkit-animation-name: fadeInUpSD;
+  animation-name: fadeInUpSD;
+}
+
+.slick-active h1 {
+  -webkit-animation-name: fadeInUpSD;
+          animation-name: fadeInUpSD;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  opacity: 1;
+  width: 100%;
+  padding: 10px 20px 30px 0;
+}
+
 .content {
   height: auto;
   width: 100%;
