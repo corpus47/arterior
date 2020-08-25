@@ -11584,6 +11584,7 @@ var _require = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jqu
       $loading.hide();
     });
   });
+  new WOW().init();
 })(jQuery);
 
 /***/ }),

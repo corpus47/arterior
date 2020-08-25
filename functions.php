@@ -19,6 +19,9 @@ function load_scripts() {
     wp_register_style('uniformimages-css',get_template_directory_uri() . '/dist/uniformimages/uniformimages.min.css', [], 1,'all');
     wp_enqueue_style('uniformimages-css');
 
+    wp_register_style('wow-css',get_template_directory_uri() . '/dist/wow/animate.css', [], 1,'all');
+    wp_enqueue_style('wow-css');
+
     wp_register_style('style',get_template_directory_uri() . '/dist/app.css', [], 1,'all');
     wp_enqueue_style('style');
 
@@ -32,6 +35,9 @@ function load_scripts() {
 
     wp_register_script('uniformimages-js', get_template_directory_uri() . '/dist/uniformimages/uniformimages.min.js', ['jquery'], 1, true);
     wp_enqueue_script('uniformimages-js');
+
+    wp_register_script('wow-js', get_template_directory_uri() . '/dist/wow/wow.min.js', ['jquery'], 1, true);
+    wp_enqueue_script('wow-js');
 
     wp_register_script('app', get_template_directory_uri() . '/dist/app.js', ['jquery'], 1, true);
     wp_enqueue_script('app');
@@ -953,7 +959,7 @@ function egyedibutorok() {
   ?><div class="egyedibutor-container-elem"><?php
   $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'single-post-thumbnail' );
   ?>
-  <div class="link-container">
+  <div class="link-container wow flipInX">
     <a href="<?php echo get_permalink();?>" class="egyedibutor-link">
       <div class="link-inner">
         <h3><?php the_title();?></h3>
