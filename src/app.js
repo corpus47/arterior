@@ -60,17 +60,19 @@ $(document).ready(function(){
     });
 
     $('.slider-container').slick({
-        autoplay: false,
+        autoplay: true,
+        autoplaySpeed:7000,
         dots:true,
         customPaging : function(slider, i) {
             return '<a href="#"><img src="'+object_name.templateUrl+'/images/slide-dot.png" /><img src="'+object_name.templateUrl+'/images/slide-dot-active.png" /></a>';
         },
         arrows:true,
-        
-        /*infinite: true,
-        cssEase: 'linear',
+        infinite: true,
+        /*cssEase: 'linear',
         variableWidth: true,
         variableHeight: true,*/
+        cssEase:'ease-in-out',
+        loop:true,
     });
 
     $(".home-referencia-slider").on("init", function(event, slick){
@@ -79,7 +81,8 @@ $(document).ready(function(){
     });
 
     $('.home-referencia-slider').slick({
-        autoplay: false,
+        autoplay: true,
+        autoplaySpeed: 7000,
         dots:false,
         arrows:true,
         slidesToShow: 3,

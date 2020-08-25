@@ -11026,24 +11026,28 @@ var _require = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jqu
       slidesToScroll: 1
     });
     $('.slider-container').slick({
-      autoplay: false,
+      autoplay: true,
+      autoplaySpeed: 7000,
       dots: true,
       customPaging: function customPaging(slider, i) {
         return '<a href="#"><img src="' + object_name.templateUrl + '/images/slide-dot.png" /><img src="' + object_name.templateUrl + '/images/slide-dot-active.png" /></a>';
       },
-      arrows: true
-      /*infinite: true,
-      cssEase: 'linear',
+      arrows: true,
+      infinite: true,
+
+      /*cssEase: 'linear',
       variableWidth: true,
       variableHeight: true,*/
-
+      cssEase: 'ease-in-out',
+      loop: true
     });
     $(".home-referencia-slider").on("init", function (event, slick) {
       /*$(".pagingInfo").text(parseInt(slick.currentSlide + 1));*/
       $(this).append('<div class="slick-counter">' + parseInt(slick.currentSlide + 1, 10));
     });
     $('.home-referencia-slider').slick({
-      autoplay: false,
+      autoplay: true,
+      autoplaySpeed: 7000,
       dots: false,
       arrows: true,
       slidesToShow: 3,
@@ -11602,8 +11606,8 @@ var _require = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jqu
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/apuci/dev/arterior/wp-content/themes/arterior/src/app.js */"./src/app.js");
-module.exports = __webpack_require__(/*! /home/apuci/dev/arterior/wp-content/themes/arterior/src/app.scss */"./src/app.scss");
+__webpack_require__(/*! C:\dev\arterior\wp-content\themes\arterior\src\app.js */"./src/app.js");
+module.exports = __webpack_require__(/*! C:\dev\arterior\wp-content\themes\arterior\src\app.scss */"./src/app.scss");
 
 
 /***/ })
