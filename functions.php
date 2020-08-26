@@ -97,6 +97,7 @@ function home_refslider() {
                     
     <div class="slide-div">                        
       <div class="slide-div-block">
+        <h3><?php the_title();?></h3>
         <?php
 
           if (has_post_thumbnail( get_the_ID() ) ):

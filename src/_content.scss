@@ -81,12 +81,19 @@
     text-align:center;
 }
 
+.home-referencia-slider .slide-div h3 {
+    font-size:1.5rem;
+    text-transform:uppercase;
+    float:left;
+    padding-bottom:1rem;
+}
+
 .home-referencia-slider .slide-div p,
 .home-butorforgalmazas-slider .slide-div p {
     width:100%;
     max-width:500px;
     text-align:justify;
-    padding-top:1.5rem;
+    padding:1.5rem 0 0 0;
 }
 
 .home-referencia-slider .slide-div img,

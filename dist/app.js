@@ -11607,8 +11607,8 @@ var _require = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jqu
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\dev\arterior\wp-content\themes\arterior\src\app.js */"./src/app.js");
-module.exports = __webpack_require__(/*! C:\dev\arterior\wp-content\themes\arterior\src\app.scss */"./src/app.scss");
+__webpack_require__(/*! /home/apuci/dev/arterior/wp-content/themes/arterior/src/app.js */"./src/app.js");
+module.exports = __webpack_require__(/*! /home/apuci/dev/arterior/wp-content/themes/arterior/src/app.scss */"./src/app.scss");
 
 
 /***/ })
