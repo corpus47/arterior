@@ -10673,7 +10673,7 @@ body .mobile-menu-container .mobile-menu-class {
 .home-referencia-slider .slide-div p,
 .home-butorforgalmazas-slider .slide-div p {
   width: 100%;
-  max-width: 500px;
+  /*max-width:500px;*/
   text-align: justify;
   padding: 1.5rem 0 0 0;
 }

@@ -10,6 +10,8 @@ add_action( 'after_setup_theme', 'my_theme_load_theme_textdomain' );
 
 function load_scripts() {
 
+    global $post;
+
     wp_register_style('slick',get_template_directory_uri() . '/dist/slick/slick.css', [], 1,'all');
     wp_enqueue_style('slick');
 
@@ -52,6 +54,17 @@ function load_scripts() {
     }
 
     $translation_array['lang'] = get_bloginfo('language');
+
+    //var_dump(get_field('kezdo_sliderkep',$post->ID));die(0);
+
+    $start_slide = get_field('kezdo_sliderkep',$post->ID);
+
+    if($start_slide == NULL || !$start_slide) {
+      $start_slide = 0;
+    }
+
+    $translation_array['start_slide'] = $start_slide;
+
     //after wp_enqueue_script
     wp_localize_script( 'app', 'object_name', $translation_array );
 

@@ -160,22 +160,52 @@ if(function_exists('arterior_user_popup')) {
                     <img src="<?php //echo get_template_directory_uri();?>/images/slide-3-1920.jpg" alt="" />    
                 </div>-->
 
-               
+                <?php
+                    $kezdo_sliderkep = get_field('kezdo_sliderkep',$post->ID);
+
+                    if($kezdo_sliderkep == NULL || !$kezdo_sliderkep) {
+                        $kezdo_sliderkep = 0;
+                    }
+                ?>
+
+                <?php $loop_array = array();?>
 
                 <?php $loop = new WP_Query( array( 'post_type' => 'home_slider', 'posts_per_page' => 10 ) ); ?>
 
                 <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-                    
-                    <div class="slide-div" style="margin:0; padding:0;">  
+                    <?php $loop_array[] = get_the_ID();?>
+                    <!--<div class="slide-div" style="margin:0; padding:0;">  
                         
                         <h1>
                             <?php 
-                            echo the_content();
+                            //echo the_content();
                             ?>
                         </h1>
-                        <img src="<?php echo get_field('slide_picture');?>" />
-                    </div>
+                        <img src="<?php //echo get_field('slide_picture');?>" />
+                    </div>-->
                 <?php endwhile; ?>
+
+                <?php //var_dump($loop_array);die(0);?>
+                <div class="slide-div" style="margin:0; padding:0;">
+                    <h1>
+                        <?php echo get_the_content(NULL,false,$loop_array[$kezdo_sliderkep])?>
+                    </h1>
+                    <img src="<?php echo get_field('slide_picture',$loop_array[$kezdo_sliderkep]);?>" />
+                </div>
+                <?php
+                foreach($loop_array as $i => $slide){
+                    if($i != $kezdo_sliderkep) {
+                        ?>
+                        <div class="slide-div" style="margin:0; padding:0;">
+                            <h1>
+                                <?php echo get_the_content(NULL,false,$slide)?>
+                            </h1>
+                            <img src="<?php echo get_field('slide_picture',$slide);?>" />
+                        </div>
+                        <?php
+                    }
+                }
+                ?>
 
             </div>
 

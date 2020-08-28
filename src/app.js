@@ -8,7 +8,7 @@ $(document).ready(function(){
 
   // The speed of the scroll in milliseconds
 
-  console.log(object_name.site_url);
+  console.log('Start slide '+object_name.start_slide);
 
   if(object_name.front_page == 0) {
     $('.dropdown-item').each(function(){
@@ -60,7 +60,8 @@ $(document).ready(function(){
     });
 
     $('.slider-container').slick({
-        autoplay: true,
+        //initialSlide: object_name.start_slide,
+        autoplay: false,
         autoplaySpeed:7000,
         dots:true,
         customPaging : function(slider, i) {
