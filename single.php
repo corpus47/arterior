@@ -42,9 +42,9 @@
 
     ?>
         </div><!-- end left-content -->
-        <div class="right-content">
+        <!--<div class="right-content">
 
-        </div><!-- end right-content -->
+        </div> end right-content -->
     </div><!-- end content-div -->
     <?php
 

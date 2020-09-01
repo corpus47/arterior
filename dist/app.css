@@ -11356,8 +11356,13 @@ body .mobile-menu-container .mobile-menu-class {
 .single-page-post .content-div .left-content {
   position: relative;
   width: 100%;
-  max-width: 75%;
+  /*max-width:75%;*/
   float: left;
+}
+
+.single-page-post a {
+  color: #000000 !important;
+  font-weight: bold;
 }
 
 .simgle-page-post .content-div .right-content {
