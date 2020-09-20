@@ -24,6 +24,9 @@ function load_scripts() {
     wp_register_style('wow-css',get_template_directory_uri() . '/dist/wow/animate.css', [], 1,'all');
     wp_enqueue_style('wow-css');
 
+    wp_register_style('parallux-css',get_template_directory_uri() . '/dist/parallux/dist/jquery.parallux.min.css', [], 1,'all');
+    wp_enqueue_style('parallux-css');
+
     wp_register_style('style',get_template_directory_uri() . '/dist/app.css', [], 1,'all');
     wp_enqueue_style('style');
 
@@ -40,6 +43,12 @@ function load_scripts() {
 
     wp_register_script('wow-js', get_template_directory_uri() . '/dist/wow/wow.min.js', ['jquery'], 1, true);
     wp_enqueue_script('wow-js');
+
+    wp_register_script('stellar-js', get_template_directory_uri() . '/dist/stellar.js/jquery.stellar.min.js', ['jquery'], 1, true);
+    wp_enqueue_script('stellar-js');
+
+    wp_register_script('parallux-js', get_template_directory_uri() . '/dist/parallux/dist/jquery.parallux.min.js', ['jquery'], 1, true);
+    wp_enqueue_script('parallux-js');
 
     wp_register_script('app', get_template_directory_uri() . '/dist/app.js', ['jquery'], 1, true);
     wp_enqueue_script('app');

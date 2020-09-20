@@ -375,6 +375,18 @@ header {
     -webkit-transition: opacity 1s ease;
 }
 
+#slider-container-box {
+    position: relative;
+    width:100%;
+    height:750px;
+    background-attachment:fixed;
+    display:block;
+}
+
+.slider-container .slide-div{
+    background-attachment: fixed;
+}
+
 .slider-container.slick-initialized,
 .home-referencia-slider.slick-initialized,
 .home-butorforgalmazas-slider.slick-initialized  {

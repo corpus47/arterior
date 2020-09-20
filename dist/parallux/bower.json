@@ -1,0 +1,31 @@
+{
+	"name": "parallux",
+	"version": "0.5.0",
+	"homepage": "https://github.com/tomsarduy/parallux",
+	"authors": [
+		"Tom Sarduy <tom.sarduy@gmail.com>"
+	],
+	"ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": ">=1.7"
+  },
+  "license": "MIT",
+	"description": "Another jquery crossbrowser parallax plugin for performance obsessed.",
+	"main": [
+		"src/jquery.parallux.js",
+		"src/jquery.parallux.scss"
+	],
+	"keywords": [
+		"jquery",
+		"plugin",
+		"parallax",
+		"full height",
+		"scroll"
+	]
+}

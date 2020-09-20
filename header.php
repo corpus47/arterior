@@ -144,6 +144,7 @@ if(function_exists('arterior_user_popup')) {
             if(need_slider(get_the_ID())):
             
             ?>
+            <div id="slider-container-box">
             <div class="slider-container"> 
                 <!--<div class="slide-div" style="margin:0; padding:0;">
                     <h1><p>Slide 1</p></h1>
@@ -200,7 +201,7 @@ if(function_exists('arterior_user_popup')) {
                             <h1>
                                 <?php echo get_the_content(NULL,false,$slide)?>
                             </h1>
-                            <img src="<?php echo get_field('slide_picture',$slide);?>" />
+                            <img src="<?php echo get_field('slide_picture',$slide);?>"/>
                         </div>
                         <?php
                     }
@@ -208,7 +209,7 @@ if(function_exists('arterior_user_popup')) {
                 ?>
 
             </div>
-
+            </div><!-- end #slider-container-box -->
             <?php endif;?>
 
         </header>

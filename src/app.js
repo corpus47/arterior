@@ -62,8 +62,9 @@ $(document).ready(function(){
     $('.slider-container').slick({
         //initialSlide: object_name.start_slide,
         autoplay: false,
-        autoplaySpeed:7000,
+        autoplaySpeed:3000,
         dots:true,
+        speed:3000,
         customPaging : function(slider, i) {
             return '<a href="#"><img src="'+object_name.templateUrl+'/images/slide-dot.png" /><img src="'+object_name.templateUrl+'/images/slide-dot-active.png" /></a>';
         },
@@ -736,6 +737,12 @@ $(document).ready(function(){
   });
 
   new WOW().init();
+
+  //$.stellar();
+  /*$('.parallux').parallux({
+    fullHeight: false,
+    onMobile: 'fixed'
+  });*/
 
 
 })(jQuery);
