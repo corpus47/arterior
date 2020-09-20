@@ -11048,11 +11048,12 @@ var _require = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jqu
     });
     $('.home-referencia-slider').slick({
       autoplay: true,
-      autoplaySpeed: 7000,
+      autoplaySpeed: 3000,
       dots: false,
       arrows: true,
       slidesToShow: 3,
       slidesToScroll: 3,
+      speed: 3000,
 
       /*infinite: true,
       cssEase: 'linear',
