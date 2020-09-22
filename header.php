@@ -144,8 +144,8 @@ if(function_exists('arterior_user_popup')) {
             if(need_slider(get_the_ID())):
             
             ?>
-            <div id="slider-container-box">
-            <div class="slider-container"> 
+            <div id="slider-container-box parallux">
+            <div class="slider-container parallux-inner"> 
                 <!--<div class="slide-div" style="margin:0; padding:0;">
                     <h1><p>Slide 1</p></h1>
                     <img src="<?php //echo get_template_directory_uri();?>/images/slide-1-1920.jpg" alt="" />

@@ -739,10 +739,10 @@ $(document).ready(function(){
   new WOW().init();
 
   //$.stellar();
-  /*$('.parallux').parallux({
+  $('.parallux').parallux({
     fullHeight: false,
     onMobile: 'fixed'
-  });*/
+  });
 
 
 })(jQuery);

@@ -10331,6 +10331,9 @@ header {
 
 .slide-div {
   position: relative;
+  width: 100%;
+  height: 750px;
+  background-attachment: fixed;
 }
 
 .slide-div h1 {

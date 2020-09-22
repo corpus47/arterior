@@ -11591,10 +11591,10 @@ var _require = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jqu
   });
   new WOW().init(); //$.stellar();
 
-  /*$('.parallux').parallux({
+  $('.parallux').parallux({
     fullHeight: false,
     onMobile: 'fixed'
-  });*/
+  });
 })(jQuery);
 
 /***/ }),
