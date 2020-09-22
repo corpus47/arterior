@@ -37,16 +37,16 @@ footer .info-container {
 footer .info-container .cell {
     width:100%;
     display:inline-block;
-    float:left;
+    float:none;
     margin:0;
     padding:0;
-    padding-right:4rem;
+    /*padding-right:4rem;*/
     text-align:center;
     height:auto;
 }
 
 .footer-logo {
-    max-width:33.33%;
+    /*max-width:33.33%;*/
 }
 
 .footer-logo a {
@@ -54,7 +54,7 @@ footer .info-container .cell {
     display:block;
     width:auto;
     height:auto;
-    float:right;
+    float:none;
 }
 
 .placeholder-left {
@@ -62,19 +62,20 @@ footer .info-container .cell {
 }
 
 .top-container-right .social {
-    width:100%;
+    width:auto;
     margin:0 auto;
-    display:block;
+    display:inline-block;
     height:auto;
-    float:right;
-    max-width:250px;
+    float:none;
+    /*max-width:250px;*/
+    position:relative;
 }
 
 .copy {
     height:auto;
     min-height:50px;
     vertical-align:middle;
-    max-width:33.33%;
+    /*max-width:33.33%;*/
 }
 
 .copy p{
@@ -86,52 +87,64 @@ footer .info-container .cell {
     display:block;
     float:left;
     height:50px;
-    width:100%;
-    max-width:33.33%;
+    width:100px;
+    /*max-width:33.33%;*/
 }
 
 .insta {
-    background:url('../images/insta.png') no-repeat center;
+    background:url('../images/insta.png') no-repeat center center;
 }
 .face {
-    background:url('../images/face.png') no-repeat center;
+    background:url('../images/face.png') no-repeat center center;
 }
 .youtube {
-    background:url('../images/youtube.png') no-repeat center;
+    background:url('../images/youtube.png') no-repeat center center;
 }
 
 footer .top-container {
     position:relative;
     margin:0;
-    padding:2rem 57px;
+    padding:2rem 57px 0rem 57px;
     width:100%;
     height:auto;
     display:inline-block;
 }
 
 .top-container .top-container-left {
-    max-width:50%;
+    /*max-width:50%;*/
     position:relative;
     margin:0;
     padding:0;
     width:100%;
     height:auto;
     display:inline-block;
+    text-align:center;
 }
 
 .top-container .top-container-right {
-    max-width:49%;
+    /*max-width:49%;*/
     position:relative;
-    margin:0;
+    margin:0 auto;
     padding:0;
     width:100%;
     height:auto;
     display:inline-block;
+    text-align:center;
 }
 
 .top-container-left .footer-menu-container {
-    text-align:left;
+    text-align:center;
     //margin-top:75px;
+    display:inline-block;
+    width:auto;
+    height:auto;
+    float:none;
+    position:relative;
+}
+
+.footer-menu-container li {
+    float:left;
+    padding:0 1rem;
 }
 
 .top-container-left .footer-menu-container li a {

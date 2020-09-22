@@ -30,22 +30,21 @@
                 </div>
                 <div class="top-container-right">
                     <div class="social">
-                        <a href="" class="insta">&nbsp;</a>
-                        <a href="" class="face">&nbsp;</a>
-                        <a href="" class="youtube">&nbsp;</a>
+                        <a href="https://www.instagram.com/arteriorkomplexkft/?hl=hu" target="_blank" class="insta">&nbsp;</a>
+                        <a href="https://www.facebook.com/Arterior-Komplex-Kft-105355624465129" target="_blank" class="face">&nbsp;</a>
+                        <!--<a href="" class="youtube">&nbsp;</a>-->
                     </div>
                 </div>
             </div>
             <div class="info-container">
-                <div class="cell placeholder-left">
+                <!--<div class="cell placeholder-left">
                     <p>&nbsp;</p>
+                </div>-->
+                <div class="cell footer-logo">
+                    <a href=""><img src="<?php echo get_template_directory_uri();?>/images/arterior-logo-footer-2.png" /></a>
                 </div>
                 <div class="cell copy">
                     <p>Arterior &copy; 2020 | Minden jog fenntartva | Jogi nyilatkozat | Adatvédelem
-                </div>
-                
-                <div class="cell footer-logo">
-                    <a href=""><img src="<?php echo get_template_directory_uri();?>/images/arterior-logo-footer-2.png" /></a>
                 </div>
             </div>
         </footer>
