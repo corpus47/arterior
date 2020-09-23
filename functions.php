@@ -74,6 +74,14 @@ function load_scripts() {
 
     $translation_array['start_slide'] = $start_slide;
 
+    if ( is_user_logged_in() ) {
+      // your code for logged in user
+      $translation_array['logged'] = 1;
+   } else {
+      // your code for logged out user
+      $translation_array['logged'] = 0;
+   }
+
     //after wp_enqueue_script
     wp_localize_script( 'app', 'object_name', $translation_array );
 

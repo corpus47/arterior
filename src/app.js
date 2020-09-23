@@ -744,6 +744,12 @@ $(document).ready(function(){
     onMobile: 'fixed'
   });
 
+  if(object_name.logged == 1 ) {
+    $("#elemkonyvtar-block").show();
+  } else {
+    $("#elemkonyvtar-block").hide();
+  }
+
 
 })(jQuery);
 

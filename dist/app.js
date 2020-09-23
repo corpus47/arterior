@@ -11595,6 +11595,12 @@ var _require = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jqu
     fullHeight: false,
     onMobile: 'fixed'
   });
+
+  if (object_name.logged == 1) {
+    $("#elemkonyvtar-block").show();
+  } else {
+    $("#elemkonyvtar-block").hide();
+  }
 })(jQuery);
 
 /***/ }),

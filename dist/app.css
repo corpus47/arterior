@@ -12058,6 +12058,10 @@ section h1, section p {
   height: auto;
 }
 
+#elemkonyvtar-block {
+  display: none;
+}
+
 @media (max-width: 450px) {
   /*.logo {
     padding-left:10px !important;
