@@ -746,8 +746,12 @@ $(document).ready(function(){
 
   if(object_name.logged == 1 ) {
     $("#elemkonyvtar-block").show();
+    $('#login-button').hide();
+    $('#logout-button').show();
   } else {
     $("#elemkonyvtar-block").hide();
+    $('#login-button').show();
+    $('#logout-button').hide();
   }
 
 

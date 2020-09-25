@@ -11598,8 +11598,12 @@ var _require = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jqu
 
   if (object_name.logged == 1) {
     $("#elemkonyvtar-block").show();
+    $('#login-button').hide();
+    $('#logout-button').show();
   } else {
     $("#elemkonyvtar-block").hide();
+    $('#login-button').show();
+    $('#logout-button').hide();
   }
 })(jQuery);
 
