@@ -12067,6 +12067,10 @@ section h1, section p {
   display: none;
 }
 
+.blog-page a {
+  color: black;
+}
+
 @media (max-width: 450px) {
   /*.logo {
     padding-left:10px !important;
