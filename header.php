@@ -93,7 +93,7 @@ if(function_exists('arterior_user_popup')) {
                     
                     </div>
                     <?php
-                    if(is_user_logged_in()) {
+                    /*if(is_user_logged_in()) {
                         $logged = 1;
                         if($dark_menu == "") {
                             $style_logged = " logged_white";
@@ -104,10 +104,18 @@ if(function_exists('arterior_user_popup')) {
                     } else {
                         $logged = 0;
                         $style_logged = "";
+                    }*/
+                    ?>
+                    <?php 
+                    $lang = get_bloginfo('language');
+                    if($lang == 'hu') {
+                        $contact_id = 'kapcsolat';
+                    } else {
+                        $contact_id = 'contact';
                     }
                     ?>
-                    
-                    <a class="user-menu<?php echo $dark_menu;echo $style_logged;?>" href="javascript:void(0);" data-user-logged="<?php echo $logged;?>" ></a>
+
+                    <a class="user-menu<?php //echo $dark_menu;echo $style_logged;?>" href="#<?php echo $contact_id;?>" data-user-logged="<?php echo $logged;?>" ></a>
                     <div class="langswitch-menu<?php echo $dark_menu;?>">
                         <ul>
                             <?php pll_the_languages([

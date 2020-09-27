@@ -11192,6 +11192,7 @@ body .mobile-menu-container .mobile-menu-class {
   display: inline-block;
   padding: 0rem 1.5rem;
   text-align: center;
+  height: 500px !important;
 }
 
 .bimgo-gdl-slider .slide-div h2,
@@ -11642,6 +11643,10 @@ body .mobile-menu-container .mobile-menu-class {
 
 pre {
   color: red;
+}
+
+.bimgo-gdl-slider .slide-div {
+  height: auto;
 }
 
 footer {

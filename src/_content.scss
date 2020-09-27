@@ -615,6 +615,7 @@
     display:inline-block;
     padding:0rem 1.5rem;
     text-align:center;
+    height:500px !important;
 }
 
 .bimgo-gdl-slider .slide-div h2,
@@ -1077,4 +1078,8 @@
 
 pre {
     color:red;
+}
+
+.bimgo-gdl-slider .slide-div {
+    height:auto;
 }
