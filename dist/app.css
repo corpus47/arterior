@@ -10130,7 +10130,7 @@ header {
 }
 
 .dark .dropdown-menu {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.95);
   -webkit-border-radius: 20px;
   -webkit-border-top-left-radius: 0;
   -moz-border-radius: 20px;
