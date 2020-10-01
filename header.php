@@ -170,11 +170,11 @@ if(function_exists('arterior_user_popup')) {
                 </div>-->
 
                 <?php
-                    $kezdo_sliderkep = get_field('kezdo_sliderkep',$post->ID);
+                    //$kezdo_sliderkep = get_field('kezdo_sliderkep',$post->ID);
 
-                    if($kezdo_sliderkep == NULL || !$kezdo_sliderkep) {
+                    //if($kezdo_sliderkep == NULL || !$kezdo_sliderkep) {
                         $kezdo_sliderkep = 0;
-                    }
+                    //}
                 ?>
 
                 <?php $loop_array = array();?>
@@ -182,7 +182,17 @@ if(function_exists('arterior_user_popup')) {
                 <?php $loop = new WP_Query( array( 'post_type' => 'home_slider', 'posts_per_page' => 10 ) ); ?>
 
                 <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-                    <?php $loop_array[] = get_the_ID();?>
+                    <?php
+                    
+                    $oldal_id = get_field('oldal_id');
+
+                    if($oldal_id == NULL || !$oldal_id || $oldal_id == get_queried_object_id()) {
+
+                        $loop_array[] = get_the_ID();
+
+                    }
+                    
+                    ?>
                     <!--<div class="slide-div" style="margin:0; padding:0;">  
                         
                         <h1>
@@ -198,6 +208,10 @@ if(function_exists('arterior_user_popup')) {
                 <div class="slide-div" style="margin:0; padding:0;">
                     <h1>
                         <?php echo get_the_content(NULL,false,$loop_array[$kezdo_sliderkep])?>
+                        <?php
+                        /*var_dump(get_field('oldal_id',$loop_array[$kezdo_sliderkep]));
+                        var_dump(get_queried_object_id());*/
+                        ?>
                     </h1>
                     <img src="<?php echo get_field('slide_picture',$loop_array[$kezdo_sliderkep]);?>" />
                 </div>
@@ -208,6 +222,10 @@ if(function_exists('arterior_user_popup')) {
                         <div class="slide-div" style="margin:0; padding:0;">
                             <h1>
                                 <?php echo get_the_content(NULL,false,$slide)?>
+                                <?php
+                                /*var_dump(get_field('oldal_id',$slide));
+                                var_dump(get_queried_object_id());*/
+                                ?>
                             </h1>
                             <img src="<?php echo get_field('slide_picture',$slide);?>"/>
                         </div>

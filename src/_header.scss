@@ -139,6 +139,21 @@ header {
     border-radius:0;
     margin-top:0;
     padding-top:0;
+    
+}
+
+.dark .dropdown-menu {
+    background:rgba(255,255,255,0.7);
+    -webkit-border-radius: 20px;
+    -webkit-border-top-left-radius: 0;
+    -moz-border-radius: 20px;
+    -moz-border-radius-topleft: 0;
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    -webkit-box-shadow: 10px 10px 28px -2px rgba(0,0,0,0.95);
+    -moz-box-shadow: 10px 10px 28px -2px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 28px -2px rgba(0,0,0,0.75);
+    z-index:99999999;
 }
 
 .dropdown-toggle::after {
@@ -174,7 +189,7 @@ header {
 }
 
 .dark .dropdown-menu li {
-    border-left:1px solid #000000; 
+    /*border-left:1px solid #000000;*/ 
 }
 
 .dropdown-menu li:last-child {
@@ -183,7 +198,7 @@ header {
 }
 
 .dark .dropdown-menu li:last-child {
-    background:url('../images/last-toogle-dark-bg.png') left no-repeat; 
+    //background:url('../images/last-toogle-dark-bg.png') left no-repeat; 
 }
 
 .header-container .current-menu-item a, 

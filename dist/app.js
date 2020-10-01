@@ -11044,8 +11044,9 @@ var _require = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jqu
       loop: true
     });
     $(".home-referencia-slider").on("init", function (event, slick) {
-      /*$(".pagingInfo").text(parseInt(slick.currentSlide + 1));*/
+      //$(".pagingInfo").text(parseInt(slick.currentSlide + 1));
       $(this).append('<div class="slick-counter">' + parseInt(slick.currentSlide + 1, 10));
+      console.log('Slick currentslide: ' + slick.currentSlide);
     });
     $('.home-referencia-slider').slick({
       autoplay: true,
@@ -11053,7 +11054,7 @@ var _require = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jqu
       dots: false,
       arrows: true,
       slidesToShow: 3,
-      slidesToScroll: 3,
+      slidesToScroll: 1,
       speed: 3000,
 
       /*infinite: true,
@@ -11089,7 +11090,14 @@ var _require = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jqu
     });
     $(".home-referencia-slider").on("afterChange", function (event, slick, currentSlide) {
       /*$(".pagingInfo").text(parseInt(slick.currentSlide + 1));*/
-      $(this).find('.slick-counter').html(slick.currentSlide + 1);
+      var currSlide = slick.currentSlide + 1;
+      /*if(currSlide > 1 ) {
+        currSlide = Math.round(currSlide / 3);
+      }*/
+      //$(this).find('.slick-counter').html(slick.currentSlide + 1);
+
+      $(this).find('.slick-counter').html(currSlide);
+      console.log('Slick currentslide change: ' + currSlide + ' % ' + Math.round(currSlide / 3));
     });
     $('.dropdown').hover(function () {
       $(this).find('.dropdown-menu').addClass('show'); //console.log($('nav').hasClass('dark'));
@@ -11605,6 +11613,22 @@ var _require = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jqu
     $('#login-button').show();
     $('#logout-button').hide();
   }
+
+  $('#vedettfogl-button').live('click', function () {
+    if ($('#vedettfogl-box').is(':visible')) {
+      $('#vedettfogl-box').hide('slow');
+      $("html, body").animate({
+        scrollTop: 0
+      }, "slow");
+    } else {
+      $('#vedettfogl-box').show('slow');
+      $('html,body').animate({
+        scrollTop: $("#vedettfogl-button").offset().top - 10
+      }, 'slow');
+    }
+
+    return false;
+  });
 })(jQuery);
 
 /***/ }),
