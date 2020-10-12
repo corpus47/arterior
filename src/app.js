@@ -61,7 +61,7 @@ $(document).ready(function(){
 
     $('.slider-container').slick({
         //initialSlide: object_name.start_slide,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed:3000,
         dots:true,
         speed:3000,
