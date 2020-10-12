@@ -1278,3 +1278,28 @@ function elemkonyvtar_link($attr = [], $content = NULL, $tag = '') {
 }
 
 add_shortcode('elemkonyvtar_link','elemkonyvtar_link');
+
+add_filter('manage_home_slider_posts_columns', 'my_columns');
+function my_columns($columns) {
+    $columns['oldal'] = 'Oldal';
+    $columns['slider_kep'] = 'Slider kép';
+    return $columns;
+}
+
+add_action('manage_posts_custom_column',  'my_show_columns');
+function my_show_columns($name) {
+    global $post;
+    switch ($name) {
+        case 'oldal':
+            //$views = get_post_meta($post->ID, 'views', true);
+            $oldal_id = get_field('oldal_id',$post->ID);
+            $oldal = get_post($oldal_id);
+            echo $oldal->post_title;
+          break;
+        case 'slider_kep':
+            $slider_kep_id = get_field('slide_picture',$post->ID);
+            //echo $slider_kep_id;
+            ?><img style="width:150px;height:auto;"src="<?php echo $slider_kep_id;?>" /><?php
+          break;
+    }
+}
